@@ -55,8 +55,8 @@ export default function HomePage() {
       />
       <HeroSection />
       <PersonaSection />
-      <UspsSection />
       <SvSection />
+      <UspsSection />
       <PeoSection />
       <KompetensiSection />
       <KarirSection />
