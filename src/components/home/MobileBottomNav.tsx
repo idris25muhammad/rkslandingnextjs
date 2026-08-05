@@ -3,7 +3,7 @@
 import { useUi } from '@/components/ui-context';
 
 export default function MobileBottomNav() {
-  const { setCommandOpen, setMobileOpen } = useUi();
+  const { setCommandOpen, mobileOpen, setMobileOpen } = useUi();
 
   return (
     <nav className="mobile-bottom-nav" aria-label="Navigasi Bawah Mobile">
@@ -20,10 +20,11 @@ export default function MobileBottomNav() {
       </button>
 
       <button
-        className="mobile-bottom-action-btn"
-        onClick={() => setMobileOpen(true)}
+        className={`mobile-bottom-action-btn${mobileOpen ? ' active' : ''}`}
+        onClick={() => setMobileOpen(!mobileOpen)}
         title="Menu Navigasi"
         aria-label="Buka Menu"
+        aria-expanded={mobileOpen}
       >
         <div className="mobile-bottom-burger-icon">
           <span className="hamburger-bar"></span>

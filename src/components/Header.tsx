@@ -16,7 +16,7 @@ export default function Header() {
     : 'home';
   const { t, lang, setLang } = useLang();
   const { theme, toggleTheme } = useTheme();
-  const { setCommandOpen, setMobileOpen } = useUi();
+  const { setCommandOpen, mobileOpen, setMobileOpen } = useUi();
 
   const homeAnchor = (hash: string) => (isSubpage ? `/#${hash}` : `#${hash}`);
   const homePage = isSubpage ? '/' : '/';
@@ -292,9 +292,10 @@ export default function Header() {
           </a>
 
           <button
-            className="mobile-toggle"
-            onClick={() => setMobileOpen(true)}
+            className={`mobile-toggle${mobileOpen ? ' is-open' : ''}`}
+            onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Buka Menu Mobile"
+            aria-expanded={mobileOpen}
           >
             <span className="hamburger-bar"></span>
             <span className="hamburger-bar"></span>

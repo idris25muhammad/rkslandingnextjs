@@ -142,6 +142,14 @@ export default function MobileMenu() {
             >
               Daftar PMB ↗
             </a>
+            <Link
+              href="/kurikulum"
+              className="btn btn--outline-cyan btn--lg"
+              style={{ width: '100%', marginTop: 10 }}
+              onClick={close}
+            >
+              {t.mobLihatKurikulum} ↗
+            </Link>
           </div>
         )}
         {variant === 'kurikulum' && (

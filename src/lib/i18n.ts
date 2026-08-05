@@ -163,6 +163,10 @@ const id: UiDict = {
   mobVideo: 'Video Profil RKS',
   mobFasilitas: 'Fasilitas Laboratorium',
   mobDosen: 'Tim Dosen Pengajar',
+  mobLihatKurikulum: 'Lihat Kurikulum',
+  diagramNoticeTitle: 'Visualisasi Interaktif (Desktop Only)',
+  diagramNoticeDesc:
+    'Diagram ini paling baik dilihat di layar lebar (desktop/laptop). Di ponsel atau tablet, tata letak diagram bisa terlihat berantakan. Gunakan mode lanskap atau akses dari komputer untuk pengalaman terbaik.',
   kurTitle: 'Kurikulum Berstandar Internasional & CDIO Project Based Learning',
   m1Label: 'Total SKS Kelulusan',
   m1Sub: 'Distribusi 8 Semester',
@@ -337,6 +341,10 @@ const en: UiDict = {
   mobVideo: 'RKS Profile Video',
   mobFasilitas: 'Laboratory Facilities',
   mobDosen: 'Faculty Members',
+  mobLihatKurikulum: 'View Curriculum',
+  diagramNoticeTitle: 'Interactive Visualization (Desktop Only)',
+  diagramNoticeDesc:
+    'This diagram is best viewed on a wide screen (desktop/laptop). On phones or tablets the layout may look broken. Rotate to landscape or open from a computer for the best experience.',
   kurTitle: 'International Standard & CDIO Project Based Learning',
   m1Label: 'Total Graduation Credits',
   m1Sub: 'Distributed across 8 Semesters',

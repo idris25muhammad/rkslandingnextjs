@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { integratedCurriculum } from '@/lib/data';
+import DiagramMobileNotice from '@/components/DiagramMobileNotice';
 
 export default function IntegratedCurrClient() {
   const [activeSkill, setActiveSkill] = useState('all');
@@ -25,7 +26,9 @@ export default function IntegratedCurrClient() {
       </section>
 
       <section className="kurikulum-body integrated-page" style={{ paddingBottom: 80 }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'center', overflowX: 'auto' }}>
+        <div className="container">
+          <DiagramMobileNotice />
+          <div style={{ display: 'flex', justifyContent: 'center', overflowX: 'auto' }}>
           <div className="wrapper">
             <div className="legend">
               {legend.map((item) => (
@@ -70,6 +73,7 @@ export default function IntegratedCurrClient() {
                 </div>
               ))}
             </div>
+          </div>
           </div>
         </div>
       </section>

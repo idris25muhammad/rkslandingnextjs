@@ -1323,6 +1323,18 @@ h4 {
   transition: var(--transition);
 }
 
+.mobile-toggle.is-open .hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-toggle.is-open .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle.is-open .hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 .mobile-menu {
   position: fixed;
   top: 74px;
@@ -1954,7 +1966,7 @@ h4 {
   }
 
   .hero-right-banner-card {
-    max-width: 100%;
+    max-width: 460px;
   }
 
   .hero-minimal__stats {
@@ -4680,12 +4692,39 @@ h4 {
   }
 
   .usp-bento-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .bento-card--large,
-  .bento-card--medium {
-    grid-column: span 2;
+  .bento-card--medium,
+  .bento-card--stat {
+    grid-column: span 1;
+  }
+
+  .matrix-filter-bar {
+    flex-direction: column;
+  }
+
+  .matrix-tabs {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .matrix-tab {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .kurikulum-filter-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .kurikulum-select-wrapper {
+    min-width: 0;
+    width: 100%;
   }
 
   .peo-cards-grid,
@@ -4725,6 +4764,10 @@ h4 {
 
   .hero-minimal__stats {
     justify-content: center;
+  }
+
+  .hero-right-banner-card {
+    max-width: 340px;
   }
 
   .tagline-banner__container {
@@ -5611,6 +5654,42 @@ h4 {
   .sv-card {
     padding: 24px;
   }
+
+  .sv-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .sv-tab {
+    justify-content: center;
+    text-align: center;
+    padding: 11px 16px;
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .sv-card__head {
+    text-align: center;
+  }
+
+  .sv-card__eyebrow {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .sv-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sv-card {
+    padding: 20px;
+  }
+
+  .sv-visi-quote {
+    flex-direction: column;
+  }
 }
 
 /* ==========================================================================
@@ -5939,6 +6018,49 @@ h4 {
 .semester-section {
   margin-bottom: 60px;
   scroll-margin-top: 200px;
+}
+
+/* Mobile-only diagram notice (integrated-curr & prasyarat pages) */
+.diagram-mobile-notice {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .diagram-mobile-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0 auto 24px;
+    max-width: 720px;
+    padding: 14px 16px;
+    background: rgba(234, 179, 8, 0.08);
+    border: 1px solid rgba(234, 179, 8, 0.35);
+    border-left: 4px solid #eab308;
+    border-radius: 10px;
+    color: var(--text-sub);
+    font-size: 0.85rem;
+    line-height: 1.55;
+    font-family: var(--font-display);
+  }
+
+  .diagram-mobile-notice svg {
+    flex-shrink: 0;
+    color: #eab308;
+    margin-top: 2px;
+  }
+
+  .diagram-mobile-notice strong {
+    display: block;
+    color: #eab308;
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin-bottom: 2px;
+  }
+
+  [data-theme="light"] .diagram-mobile-notice {
+    background: #fffbeb;
+    border-color: rgba(234, 179, 8, 0.4);
+  }
 }
 
 .semester-header {
@@ -6376,6 +6498,34 @@ h4 {
 
   .courses-grid {
     grid-template-columns: 1fr;
+  }
+
+  .semester-header {
+    align-items: flex-start;
+  }
+
+  .semester-header__title {
+    font-size: 1.35rem;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .course-card {
+    padding: 20px;
+  }
+
+  .course-card__top {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .course-card__footer {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .kurikulum-filter-row {
+    padding: 12px 14px;
   }
 
   .kurikulum-controls-section {

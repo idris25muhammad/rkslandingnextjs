@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { prasyarat } from '@/lib/data';
+import DiagramMobileNotice from '@/components/DiagramMobileNotice';
 
 export default function PrasyaratClient() {
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -111,7 +112,9 @@ export default function PrasyaratClient() {
       </section>
 
       <section className="kurikulum-body prasyarat-page" style={{ paddingBottom: 80 }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'center', overflowX: 'auto' }}>
+        <div className="container">
+          <DiagramMobileNotice />
+          <div style={{ display: 'flex', justifyContent: 'center', overflowX: 'auto' }}>
           <div className="master-container">
             <div className="wrapper" ref={wrapperRef}>
               <div className="curriculum-grid">
@@ -144,6 +147,7 @@ export default function PrasyaratClient() {
               </div>
               <svg id="connection-layer" ref={svgRef}></svg>
             </div>
+          </div>
           </div>
         </div>
       </section>
