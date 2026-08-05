@@ -1,0 +1,91 @@
+{
+  "id": {
+    "calon-mahasiswa": {
+      "title": "Untuk Calon Mahasiswa (Siswa SMA/SMK)",
+      "desc": "Ingin berkarir di bidang Cyber Security? D4 Rekayasa Keamanan Siber Polibatam menawarkan studi 8 semester berbasis praktikum hands-on, sertifikasi internasional (CEH, Cisco), dan jaminan magang industri.",
+      "links": [
+        { "label": "Syarat & Jalur PMB", "url": "#pmb" },
+        { "label": "Prospek Karir Lulusan", "url": "#karir" },
+        { "label": "Tur Lab SOC & Fasilitas", "url": "#fasilitas" }
+      ]
+    },
+    "mahasiswa": {
+      "title": "Untuk Mahasiswa Aktif & Praktisi",
+      "desc": "Akses silabus CPL Capaian Pembelajaran, persiapan sertifikasi EC-Council & Cisco, jadwal ujian, dan laboratorium SOC untuk pengerjaan Project Based Learning (PBL).",
+      "links": [
+        { "label": "20+ Sertifikasi Global", "url": "#sertifikasi" },
+        { "label": "Tim Dosen Pengajar", "url": "#dosen" }
+      ]
+    },
+    "industri": {
+      "title": "Untuk Mitra Industri, Perusahaan & BUMN",
+      "desc": "Bekerja sama dengan RKS Polibatam untuk rekrutmen talenta Cyber Security, program magang industri 1-2 semester, proyek riset terapan CSIRT, dan konsultasi keamanan siber.",
+      "links": [
+        { "label": "Profil PEO Lulusan", "url": "#peo" },
+        { "label": "Standar Akreditasi IABEE", "url": "#akreditasi" },
+        { "label": "Kontak Kerjasama Industri", "url": "#pmb" }
+      ]
+    },
+    "orang-tua": {
+      "title": "Untuk Orang Tua / Wali Mahasiswa",
+      "desc": "Program Studi D4 RKS terakreditasi LAM INFOKOM & berstandar IABEE dengan prospek kerja yang sangat tinggi di sektor perbankan, BUMN, instansi pemerintah, dan SOC global.",
+      "links": [
+        { "label": "Kenapa Pilih RKS Polibatam?", "url": "#profil" },
+        { "label": "Bisa kerja apa???", "url": "#karir" }
+      ]
+    },
+    "alumni": {
+      "title": "Untuk Alumni RKS",
+      "desc": "Tetap terhubung dengan jaringan Alumni RKS Polibatam, pembaruan sertifikasi profesi tingkat lanjut, dan program Tracer Study.",
+      "links": [
+        { "label": "Jaringan Alumni & Karir", "url": "https://www.polibatam.ac.id/alumni/" },
+        { "label": "Sertifikasi Professional", "url": "#sertifikasi" }
+      ]
+    }
+  },
+  "en": {
+    "calon-mahasiswa": {
+      "title": "🎓 Information for Prospective Students (High School Graduates)",
+      "desc": "Aspiring to build a career in Cybersecurity? D4 Cyber Security Engineering at Polibatam offers an 8-semester hands-on curriculum with global certifications (CEH, Cisco) and guaranteed industry internships.",
+      "links": [
+        { "label": "Admission Requirements & PMB Tracks", "url": "#pmb" },
+        { "label": "Graduate Career Opportunities", "url": "#karir" },
+        { "label": "SOC Lab Facilities & Campus Tour", "url": "#fasilitas" }
+      ]
+    },
+    "mahasiswa": {
+      "title": "Information for Current Students & Practitioners",
+      "desc": "Access the 10 CPL learning outcomes, EC-Council & Cisco exam prep, exam schedules, and SOC labs for Project-Based Learning (PBL) industry tasks.",
+      "links": [
+        { "label": "Learning Outcomes (CPL)", "url": "#cpl-list" },
+        { "label": "20+ Global Certifications", "url": "#sertifikasi" },
+        { "label": "Faculty & Lecturer Team", "url": "#dosen" }
+      ]
+    },
+    "industri": {
+      "title": "Information for Industry & Enterprise Partners",
+      "desc": "Partner with RKS Polibatam for Cybersecurity talent recruitment, 1-2 semester full-time internships, applied CSIRT research projects, and security consulting.",
+      "links": [
+        { "label": "PEO Professional Profile", "url": "#peo" },
+        { "label": "IABEE Accreditation Criteria", "url": "#akreditasi" },
+        { "label": "Industry Partnership Contact", "url": "#pmb" }
+      ]
+    },
+    "orang-tua": {
+      "title": " Information for Parents & Guardians",
+      "desc": "D4 RKS is accredited Excellent by LAM INFOKOM and IABEE standards, assuring top-tier employment prospects in banking, government, and global SOCs.",
+      "links": [
+        { "label": "Why Choose RKS Polibatam?", "url": "#profil" },
+        { "label": "Download Accreditation PDF", "url": "dokumen/akreditasi_iabee.pdf" }
+      ]
+    },
+    "alumni": {
+      "title": "Information for RKS Alumni",
+      "desc": "Stay connected with the RKS Alumni Network, advance your professional certifications, and participate in annual Tracer Study initiatives.",
+      "links": [
+        { "label": "Alumni & Career Network", "url": "https://www.polibatam.ac.id/alumni/" },
+        { "label": "Professional Certifications", "url": "#sertifikasi" }
+      ]
+    }
+  }
+}

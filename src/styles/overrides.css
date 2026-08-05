@@ -1,0 +1,420 @@
+/* ==========================================================================
+   PAGE-SPECIFIC STYLES (formerly inline <style> blocks)
+   Scoped to avoid collisions between pages.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   SV SECTION helper classes (replaces inline onmouseover/onmouseout handlers)
+   -------------------------------------------------------------------------- */
+.sv-youtube-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ff0000;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sv-youtube-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+}
+
+.sv-social-link {
+  color: var(--text-secondary);
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+}
+
+.sv-social-link:hover {
+  transform: translateY(-4px);
+}
+
+.sv-social-link--fb:hover {
+  color: #1877f2;
+}
+
+.sv-social-link--ig:hover {
+  color: #e1306c;
+}
+
+.sv-social-link--yt:hover {
+  color: #ff0000;
+}
+
+
+/* --------------------------------------------------------------------------
+   INTEGRATED CURRICULUM MATRIX (integrated-curr page)
+   -------------------------------------------------------------------------- */
+.integrated-page :root {
+  --sidebar-year: #1e293b;
+  --sidebar-project: #64748b;
+  --product-dev: #104baa;
+  --written-comm: #7c3aed;
+  --comm-english: #0d9488;
+  --system-thinking: #b07f06;
+  --teamwork: #348800;
+  --professional-skills: #ea580c;
+  --text-light: #ffffff;
+  --border-color: #e2e8f0;
+}
+
+.integrated-page .wrapper {
+  max-width: 1800px;
+  width: 100%;
+  background-color: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-subtle);
+}
+
+.integrated-page .legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.integrated-page .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 20px;
+  color: #334155;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.integrated-page .legend-item:hover {
+  transform: translateY(-1px);
+  background-color: #e2e8f0;
+}
+
+.integrated-page .legend-item.active {
+  border-color: var(--cyan-bright);
+  background-color: #1e293b;
+  color: white;
+}
+
+.integrated-page .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.integrated-page .curriculum-grid {
+  display: grid;
+  grid-template-columns: 130px 150px 110px auto;
+}
+
+.integrated-page .cell {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 13px;
+}
+
+.integrated-page .year-col {
+  background-color: var(--sidebar-year);
+  color: var(--text-light);
+  font-weight: 700;
+  flex-direction: column;
+}
+
+.integrated-page .year-col span {
+  font-weight: 400;
+  font-size: 9px;
+  margin-top: 8px;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.integrated-page .project-col {
+  background-color: var(--sidebar-project);
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.integrated-page .semester-col {
+  font-weight: 600;
+  background-color: #ffffff;
+  color: #1e293b;
+}
+
+.integrated-page .course-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 22px;
+  justify-content: flex-start;
+  background-color: #fff;
+}
+
+.integrated-page .course-box {
+  width: 125px;
+  min-height: 35px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.integrated-page .course-box.faded {
+  opacity: 0.1;
+  filter: grayscale(1);
+  pointer-events: none;
+}
+
+.integrated-page .course-box:not(.faded):hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.integrated-page .pd {
+  background-color: var(--product-dev);
+}
+.integrated-page .wc {
+  background-color: var(--written-comm);
+}
+.integrated-page .ce {
+  background-color: var(--comm-english);
+}
+.integrated-page .st {
+  background-color: var(--system-thinking);
+}
+.integrated-page .tw {
+  background-color: var(--teamwork);
+}
+.integrated-page .ps {
+  background-color: var(--professional-skills);
+}
+
+.integrated-page .dot.pd {
+  background-color: var(--product-dev);
+}
+.integrated-page .dot.wc {
+  background-color: var(--written-comm);
+}
+.integrated-page .dot.st {
+  background-color: var(--system-thinking);
+}
+.integrated-page .dot.tw {
+  background-color: var(--teamwork);
+}
+.integrated-page .dot.ce {
+  background-color: var(--comm-english);
+}
+.integrated-page .dot.ps {
+  background-color: var(--professional-skills);
+}
+
+[data-theme='dark'] .integrated-page .wrapper {
+  background-color: var(--bg-card);
+  border-color: var(--border-subtle);
+}
+[data-theme='dark'] .integrated-page .legend {
+  background-color: var(--bg-card);
+  border-color: var(--border-subtle);
+}
+[data-theme='dark'] .integrated-page .legend-item {
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  border-color: var(--border-subtle);
+}
+[data-theme='dark'] .integrated-page .cell {
+  border-color: var(--border-subtle);
+}
+[data-theme='dark'] .integrated-page .semester-col {
+  background-color: #0b1120;
+  color: var(--text-main);
+}
+[data-theme='dark'] .integrated-page .course-container {
+  background-color: var(--bg-base);
+}
+[data-theme='dark'] .integrated-page .year-col {
+  background-color: #0f172a;
+}
+[data-theme='dark'] .integrated-page .project-col {
+  background-color: #1e293b;
+}
+
+/* --------------------------------------------------------------------------
+   PREREQUISITE LINKMAP (prasyarat-linkmap page)
+   -------------------------------------------------------------------------- */
+.prasyarat-page .master-container {
+  position: relative;
+  max-width: 1800px;
+  width: 100%;
+}
+
+.prasyarat-page .wrapper {
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-subtle);
+  position: relative;
+  z-index: 1;
+}
+
+.prasyarat-page #connection-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.prasyarat-page .connector-line {
+  stroke-width: 2;
+  fill: none;
+  stroke-dasharray: 6, 3;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+
+.prasyarat-page .endpoint-diamond {
+  stroke: white;
+  stroke-width: 1;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+
+.prasyarat-page .wrapper.is-active .connector-line {
+  opacity: 0.1;
+}
+.prasyarat-page .wrapper.is-active .endpoint-diamond {
+  opacity: 0.1;
+}
+.prasyarat-page .wrapper.is-active .course-box {
+  opacity: 0.2;
+  filter: grayscale(0.5);
+}
+
+.prasyarat-page .connector-line.highlight {
+  opacity: 1 !important;
+  stroke-width: 3;
+  stroke-dasharray: none;
+}
+.prasyarat-page .endpoint-diamond.highlight {
+  opacity: 1 !important;
+}
+.prasyarat-page .course-box.highlight {
+  opacity: 1 !important;
+  filter: grayscale(0) !important;
+  transform: scale(1.05);
+  z-index: 20;
+  box-shadow: 0 6px 16px rgba(0, 240, 255, 0.3);
+  border-color: var(--cyan-bright) !important;
+}
+
+.prasyarat-page .curriculum-grid {
+  display: grid;
+  grid-template-columns: 130px auto;
+}
+
+.prasyarat-page .cell {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+}
+
+.prasyarat-page .semester-col {
+  font-weight: 700;
+  background-color: #1e293b;
+  color: white;
+  border-right: none;
+  text-align: center;
+}
+
+.prasyarat-page .course-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 25px;
+  justify-content: flex-start;
+  background-color: #fff;
+}
+
+.prasyarat-page .course-box {
+  width: 130px;
+  min-height: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  background-color: #1e40af;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+[data-theme='dark'] .prasyarat-page .wrapper {
+  background-color: var(--bg-card);
+  border-color: var(--border-subtle);
+}
+[data-theme='dark'] .prasyarat-page .cell {
+  border-color: var(--border-subtle);
+}
+[data-theme='dark'] .prasyarat-page .semester-col {
+  background-color: #0b1120;
+  color: var(--text-main);
+}
+[data-theme='dark'] .prasyarat-page .course-container {
+  background-color: var(--bg-base);
+}
+[data-theme='dark'] .prasyarat-page .course-box {
+  background-color: #0f172a;
+  border-color: var(--border-subtle);
+  color: var(--text-main);
+}

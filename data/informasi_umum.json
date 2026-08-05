@@ -1,0 +1,96 @@
+{
+  "program_studi": "DIV Rekayasa Keamanan Siber",
+  "deskripsi": "Program studi yang mengkhususkan pada pengembangan keamanan siber untuk tujuan tertentu. Lulusan memiliki keterampilan yang baik di bidang keamanan siber dan jaringan.",
+  "jenjang": "D4",
+  "lama_studi": "8 semester",
+  "visi": "Menjadi program studi yang unggul dan berdaya saing dalam bidang Keamanan Siber di kawasan Asia Tenggara.",
+  "misi": [
+    "Menyelenggarakan pendidikan vokasi dalam bidang Keamanan Siber terbaik di Asia Tenggara.",
+    "Melakukan riset aplikatif berbasis kemitraan dengan industri dan masyarakat dibidang Keamanan Siber.",
+    "Melakukan kegiatan pemberdayaan masyarakat di bidang Keamanan Siber.",
+    "Menyelenggarakan tata kelola organisasi yang baik dan bersih."
+  ],
+  "tujuan": [
+    "Menghasilkan lulusan yang kompeten, terampil dan bersertifikasi di bidang Keamanan Siber.",
+    "Menghasilkan penelitian dengan bermitra industri dan masyarakat di bidang Keamanan Siber.",
+    "Berperan Aktif dalam meningkatkan kepedulian terhadap Keamanan Siber bagi masyarakat.",
+    "Mewujudkan tata kelola organisasi yang baik dan bersih sesuai dengan standar internasional."
+  ],
+  "sasaran": [
+    "Meningkatnya mutu dan akses layanan pembelajaran di bidang Keamanan Siber.",
+    "Meningkatnya relevansi, daya saing dan kemandirian lulusan di bidang Keamanan Siber.",
+    "Meningkatnya mutu dan publikasi penelitian yang dihasilkan di bidang Keamanan Siber.",
+    "Meningkatnya pemanfaatan hasil penelitian dan pengabdian masyarakat di bidang Keamanan Siber.",
+    "Meningkatnya mutu kinerja layanan dan tata kelola yang baik dan bersih di program studi."
+  ],
+  "program_educational_objectives": {
+    "deskripsi": "Pernyataan yang secara luas menggambarkan karir dan pencapaian profesional yang dipersiapkan oleh program untuk dicapai lulusan beberapa tahun setelah lulus dari program pendidikan. PEO digunakan sebagai acuan dalam merumuskan capaian pembelajaran lulusan.",
+    "target_waktu": "3 hingga 5 tahun setelah lulus",
+    "profil_profesional_mandiri": [
+      "Lulusan berkarir dan berkontribusi secara aktif serta inovatif dalam mengidentifikasi, menganalisis, dan menyelesaikan berbagai permasalahan keamanan siber di industri dan masyarakat melalui penerapan teknologi informasi yang tepat guna dan beretika.",
+      "Lulusan senantiasa mengembangkan kompetensi di bidang keamanan siber, baik dari aspek teknis, regulasi, maupun manajerial melalui penelitian terapan, partisipasi dalam komunitas profesional, serta pembelajaran sepanjang hayat.",
+      "Lulusan mampu secara kreatif, inovatif, dan profesional menghasilkan solusi, produk, maupun layanan keamanan siber yang sesuai dengan perkembangan teknologi dan kebutuhan masyarakat global."
+    ]
+  },
+  "kompetensi_lulusan": [
+    "Memiliki kemampuan dan keterampilan dalam menindaklanjuti ancaman keamanan dalam suatu organisasi.",
+    "Memiliki kemampuan dan keterampilan dalam melaksanakan implementasi dan membuat laporan pelaksanaan program keamanan siber sesuai rencana implementasi manajemen risiko yang sudah ditetapkan.",
+    "Memiliki kemampuan dan keterampilan untuk menganalisa ancaman keamanan jaringan baik dari dalam maupun luar jangkauan dan mengembangkan kebijakan keamanan.",
+    "Memiliki kemampuan dan keterampilan dalam menganalisis penilaian terhadap celah keamanan siber.",
+    "Memiliki kemampuan dan keterampilan dalam merancang program peningkatan kesadaran risiko keamanan siber.",
+    "Memiliki kemampuan dan keterampilan untuk melakukan penilaian terhadap celah keamanan dalam sebuah sistem pada sebuah organisasi.",
+    "Memiliki kemampuan dan keterampilan dalam melakukan instalasi serta konfigurasi keamanan aset institusi/perusahaan.",
+    "Memiliki kemampuan dan keterampilan dalam melakukan instalasi, serta konfigurasi Jaringan dalam skala institusi/perusahaan.",
+    "Memiliki kemampuan dan keterampilan dalam melakukan instalasi serta konfigurasi komputer, software, maupun jaringan."
+  ],
+  "capaian_pembelajaran_lulusan": [
+    "Mampu mengidentifikasi dan menerapkan pengetahuan yang dibutuhkan dalam matematika, ilmu alam, komputasi, dasar-dasar rekayasa, dan keahlian teknik yang sesuai dengan disiplin untuk prosedur, proses, sistem, atau metodologi rekayasa yang telah ditentukan dan diterapkan.",
+    "Mampu mengidentifikasi, menyimpulkan, merumuskan, meneliti dan mengevaluasi literatur, serta menganalisis permasalahan rekayasa yang didefinisikan secara luas dengan mencapai kesimpulan yang dapat dibuktikan menggunakan alat analisis yang sesuai dengan disiplin atau bidang spesialisasi.",
+    "Mampu merancang sistem, komponen, atau proses untuk memenuhi kebutuhan yang teridentifikasi dalam menyelesaikan permasalahan rekayasa yang didefinisikan secara luas dan sesuai dengan disiplin, dengan mempertimbangkan dampaknya dalam aspek kesehatan, keselamatan, ekonomi, hukum, masyarakat, dan lingkungan.",
+    "Mampu menemukan, memilih, dan mengorganisasi data relevan dari kode, basis data, dan literatur; serta merancang dan melakukan eksperimen untuk menghasilkan kesimpulan yang valid dalam investigasi terhadap permasalahan rekayasa yang didefinisikan secara luas.",
+    "Mampu menggunakan dan memanfaatkan semua sumber daya dan teknologi yang dibutuhkan, termasuk prediksi dan pemodelan, untuk menyelesaikan permasalahan rekayasa yang didefinisikan secara luas.",
+    "Mampu secara konsisten mematuhi etika profesional dan norma praktik teknologi rekayasa termasuk kepatuhan terhadap hukum nasional dan internasional, dengan menghormati keberagaman dan inklusi.",
+    "Mampu berfungsi secara efektif dalam menyelesaikan berbagai tugas, baik secara individu maupun sebagai anggota atau pemimpin dalam tim yang beragam, inklusif, dan multidisipliner di berbagai lingkungan kerja.",
+    "Mampu menerapkan komunikasi tertulis, lisan, dan grafis secara efektif dan inklusif dalam berbagai komunitas dan lingkungan yang didefinisikan secara luas dengan memperhatikan perbedaan budaya, bahasa, dan cara belajar.",
+    "Mampu menerapkan prinsip-prinsip manajemen rekayasa dalam proyek, baik sebagai anggota maupun pemimpin dalam tim multidisipliner.",
+    "Mampu secara mandiri melakukan pengembangan diri dan pembelajaran sepanjang hayat, serta berpikir kritis dan inovatif."
+  ],
+  "peluang_kerja_lulusan": [
+    {
+      "posisi": "Cyber Security Analyst",
+      "deskripsi": "Memiliki kemampuan dan keterampilan dalam menindaklanjuti ancaman keamanan dalam suatu organisasi, serta bertugas untuk melaksanakan prosedur-prosedur dan perintah dari pejabat diatasnya pada pusat operasi keamanan."
+    },
+    {
+      "posisi": "Cyber Security Administrator",
+      "deskripsi": "Memiliki kemampuan dan keterampilan dalam melaksanakan implementasi dan membuat laporan pelaksanaan program keamanan siber sesuai rencana implementasi manajemen risiko yang sudah ditetapkan."
+    },
+    {
+      "posisi": "Network Security Administrator",
+      "deskripsi": "Memiliki kemampuan dan keterampilan untuk menganalisa ancaman keamanan jaringan baik dari dalam maupun luar jangkauan dan mengembangkan kebijakan keamanan yang diperlukan sesuai kebijakan keamanan yang berlaku."
+    },
+    {
+      "posisi": "Vulnerability Assessment Analyst",
+      "deskripsi": "Memiliki kemampuan dan keterampilan dalam melaksanakan implementasi program keamanan siber sesuai tugas yang diberikan."
+    },
+    {
+      "posisi": "Cyber Security Awareness",
+      "deskripsi": "Memiliki kemampuan dan keterampilan untuk mengelola tata kelola keamanan siber, memberikan asesmen risiko keamanan siber, dan menegakkan pelaksanaan tata kelola keamanan siber."
+    },
+    {
+      "posisi": "Junior Cyber Security",
+      "deskripsi": "Memiliki kemampuan dan keterampilan untuk melakukan penilaian terhadap celah keamanan dalam sebuah sistem pada sebuah organisasi."
+    },
+    {
+      "posisi": "IT Security Operator",
+      "deskripsi": "Sebuah pekerjaan yang memfokuskan diri untuk memperbaiki sebuah server baik itu instalasi sampai dengan masalah trobleshooting."
+    },
+    {
+      "posisi": "Administrator Jaringan",
+      "deskripsi": "Meng-install, mengkonfigurasi, dan mendukung Local Area Network (LAN), Wide Area Network (WAN), dan sistem Internet atau segmen dari sistem jaringan."
+    },
+    {
+      "posisi": "IT Support",
+      "deskripsi": "Membuat website—sekumpulan konten online termasuk dokumen dan aplikasi yang berada pada server web / server."
+    }
+  ]
+}

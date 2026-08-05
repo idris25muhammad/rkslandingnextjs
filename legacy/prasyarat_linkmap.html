@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Peta Alur &amp; Prasyarat Mata Kuliah | D4 Rekayasa Keamanan Siber Polibatam</title>
+  <meta name="title" content="Peta Alur &amp; Prasyarat Mata Kuliah | D4 Rekayasa Keamanan Siber Polibatam">
+  <meta name="description"
+    content="Visualisasi Interaktif Peta Alur & Prasyarat Mata Kuliah Sarjana Terapan (D4) Rekayasa Keamanan Siber Polibatam.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo/rks.png" type="image/png">
+
+  <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, DM Sans, & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --bg-body: #f8fafc;
+      --course-color: #1e40af;
+      --text-light: #ffffff;
+      --border-color: #e2e8f0;
+    }
+
+    .master-container {
+      position: relative;
+      max-width: 1800px;
+      width: 100%;
+    }
+
+    .wrapper {
+      width: 90%;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--border-subtle);
+      position: relative;
+      z-index: 1;
+    }
+
+    #connection-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .connector-line {
+      stroke-width: 2;
+      fill: none;
+      stroke-dasharray: 6, 3;
+      opacity: 0.6;
+      transition: all 0.3s;
+    }
+
+    .endpoint-diamond {
+      stroke: white;
+      stroke-width: 1;
+      opacity: 0.6;
+      transition: all 0.3s;
+    }
+
+    .wrapper.is-active .connector-line {
+      opacity: 0.1;
+    }
+
+    .wrapper.is-active .endpoint-diamond {
+      opacity: 0.1;
+    }
+
+    .wrapper.is-active .course-box {
+      opacity: 0.2;
+      filter: grayscale(0.5);
+    }
+
+    .connector-line.highlight {
+      opacity: 1 !important;
+      stroke-width: 3;
+      stroke-dasharray: none;
+    }
+
+    .endpoint-diamond.highlight {
+      opacity: 1 !important;
+    }
+
+    .course-box.highlight {
+      opacity: 1 !important;
+      filter: grayscale(0) !important;
+      transform: scale(1.05);
+      z-index: 20;
+      box-shadow: 0 6px 16px rgba(0, 240, 255, 0.3);
+      border-color: var(--cyan-bright) !important;
+    }
+
+    .curriculum-grid {
+      display: grid;
+      grid-template-columns: 130px auto;
+    }
+
+    .cell {
+      padding: 15px;
+      border-bottom: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 11px;
+    }
+
+    .semester-col {
+      font-weight: 700;
+      background-color: #1e293b;
+      color: white;
+      border-right: none;
+      text-align: center;
+    }
+
+    .course-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 25px;
+      justify-content: flex-start;
+      background-color: #fff;
+    }
+
+    .course-box {
+      width: 130px;
+      min-height: 40px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: center;
+      background-color: var(--course-color);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 5;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    /* Dark Theme Overrides */
+    [data-theme="dark"] .wrapper {
+      background-color: var(--bg-card);
+      border-color: var(--border-subtle);
+    }
+
+    [data-theme="dark"] .cell {
+      border-color: var(--border-subtle);
+    }
+
+    [data-theme="dark"] .semester-col {
+      background-color: #0b1120;
+      color: var(--text-main);
+    }
+
+    [data-theme="dark"] .course-container {
+      background-color: var(--bg-base);
+    }
+
+    [data-theme="dark"] .course-box {
+      background-color: #0f172a;
+      border-color: var(--border-subtle);
+      color: var(--text-main);
+    }
+  </style>
+</head>
+
+<body class="dark-theme">
+
+  <!-- 1. STREAMLINED SITE HEADER & MEGAMENU -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__container">
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="site-header__logo" aria-label="Beranda RKS Polibatam">
+        <div class="logo-cyan-box">
+          <img src="images/logo/rks.png" alt="Logo Rekayasa Keamanan Siber Polibatam" class="logo-img" width="64"
+            height="64">
+        </div>
+        <div class="logo-text">
+          <span class="brand-title" id="i18n-brand-title">REKAYASA KEAMANAN SIBER</span>
+          <span class="brand-subtitle">Politeknik Negeri Batam</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="site-header__nav" aria-label="Navigasi Utama">
+        <ul class="nav-list">
+
+          <!-- Menu 1: Profil & Akademik -->
+          <li class="nav-item has-megamenu">
+            <a href="index.html#profil" class="nav-link">
+              <span id="i18n-nav-profil">Profil &amp; Akademik</span>
+              <svg class="chevron-svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </a>
+            <div class="megamenu">
+              <div class="megamenu__inner">
+                <div class="megamenu__col">
+                  <h4 class="megamenu__heading" id="i18n-mm-tentang">Tentang D4 RKS</h4>
+                  <ul class="megamenu__links">
+                    <li><a href="index.html#profil"><span class="icon-dot"></span> <span id="i18n-mm-overview">Gambaran
+                          Umum &amp; Keunggulan</span></a></li>
+                    <li><a href="index.html#komitmen"><span class="icon-dot"></span> <span id="i18n-mm-visi">Visi, Misi,
+                          Tujuan &amp; Sasaran</span></a></li>
+                    <li><a href="index.html#peo"><span class="icon-dot"></span> <span id="i18n-mm-peo">PEO (Tujuan
+                          Pendidikan)</span></a></li>
+                    <li><a href="index.html#dosen"><span class="icon-dot"></span> <span id="i18n-mm-dosen">Tim Dosen
+                          &amp;
+                          Pengajar</span></a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__col">
+                  <h4 class="megamenu__heading" id="i18n-mm-standar">Akreditasi Global</h4>
+                  <div class="megamenu-badges">
+                    <button class="badge-img-btn cert-popup-trigger" data-cert-img="dokumen/sertifikat_laminfokom.jpg"
+                      data-cert-title="Sertifikat Akreditasi LAM INFOKOM (Baik Sekali)"
+                      title="Lihat Sertifikat LAM INFOKOM">
+                      <img src="images/logo/laminfokom.png" alt="LAM INFOKOM Baik Sekali" class="badge-img" width="110"
+                        height="34" loading="lazy">
+                      <span class="badge-tag-text">BAIK SEKALI</span>
+                    </button>
+                    <button class="badge-img-btn cert-popup-trigger" data-cert-img="dokumen/sertifikat_iabee.jpg"
+                      data-cert-title="Sertifikat Akreditasi IABEE" title="Lihat Sertifikat IABEE">
+                      <img src="images/logo/iabee.png" alt="IABEE Standard" class="badge-img" width="110" height="34"
+                        loading="lazy">
+                      <span class="badge-tag-text">PROVISIONAL</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Menu 2: Kurikulum & Karir (Active State) -->
+          <li class="nav-item has-megamenu">
+            <a href="kurikulum.html" class="nav-link active" style="color: var(--cyan-bright);">
+              <span id="i18n-nav-kurikulum">Kurikulum 8 Semester</span>
+              <svg class="chevron-svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </a>
+            <div class="megamenu">
+              <div class="megamenu__inner">
+                <div class="megamenu__col">
+                  <h4 class="megamenu__heading">Struktur Kurikulum</h4>
+                  <ul class="megamenu__links">
+                    <li><a href="kurikulum.html"><span class="icon-dot"></span> <span>Matriks 8 Semester</span></a></li>
+                    <li><a href="integrated-curr.html"><span class="icon-dot"></span> <span>Kurikulum Terintegrasi
+                          Mapping</span></a></li>
+                    <li><a href="prasyarat_linkmap.html"><span class="icon-dot"></span> <span>Prasyarat Mata
+                          Kuliah</span></a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__col">
+                  <h4 class="megamenu__heading">Fasilitas &amp; Karir</h4>
+                  <ul class="megamenu__links">
+                    <li><a href="index.html#fasilitas"><span class="icon-dot"></span> <span>Lab SOC 24/7
+                          Monitoring</span></a></li>
+                    <li><a href="index.html#karir"><span class="icon-dot"></span> <span id="i18n-mm-karir">Prospek Karir
+                          Lulusan</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Action Controls Group -->
+      <div class="site-header__actions">
+        <!-- Compact Command Search Button -->
+        <button class="header-search-btn" id="command-search-trigger" title="Cari di RKS (Ctrl+K / /)"
+          aria-label="Buka Pencarian">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-btn-text" id="global-search-input">Cari matkul, sertifikasi...</span>
+          <kbd class="search-shortcut">Ctrl+K</kbd>
+        </button>
+
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" title="Ganti Tema (Dark / Light)"
+          aria-label="Ganti Tema">
+          <svg class="theme-icon theme-icon-dark" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <svg class="theme-icon theme-icon-light" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+          </svg>
+        </button>
+
+        <!-- Multilingual Language Toggle -->
+        <div class="lang-switcher" id="lang-switcher" aria-label="Pilih Bahasa">
+          <button class="lang-btn active" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" data-lang="en" aria-label="English Language">EN</button>
+        </div>
+
+        <a href="index.html#pmb" class="btn btn--cyan btn--sm" id="i18n-btn-pmb">Daftar↗</a>
+
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Buka Menu Mobile">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- SEARCH COMMAND PALETTE MODAL -->
+  <div class="command-modal-overlay" id="command-modal-overlay">
+    <div class="command-modal">
+      <div class="command-modal__header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <input type="text" id="command-modal-input" placeholder="Cari mata kuliah (Pentest, SOC, Python, DFIR)..."
+          autofocus>
+        <kbd class="command-esc">ESC</kbd>
+      </div>
+      <div class="command-modal__body" id="command-modal-results"></div>
+      <div class="command-modal__footer">
+        <span><kbd>↑</kbd> <kbd>↓</kbd> Navigasi</span>
+        <span><kbd>↵</kbd> Pilih</span>
+        <span><kbd>ESC</kbd> Tutup</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATE LIGHTBOX POPUP MODAL -->
+  <div class="cert-modal-overlay" id="cert-modal-overlay">
+    <div class="cert-modal">
+      <div class="cert-modal__header">
+        <span class="cert-modal__title" id="cert-modal-title">Sertifikat Akreditasi Program Studi</span>
+        <button class="cert-modal__close" id="cert-modal-close" aria-label="Tutup Popup">&times;</button>
+      </div>
+      <div class="cert-modal__body">
+        <img id="cert-modal-img" src="" alt="Sertifikat Akreditasi RKS Polibatam" loading="lazy">
+      </div>
+      <div class="cert-modal__footer">
+        <a id="cert-modal-download" href="" target="_blank" download class="btn btn--cyan btn--sm">Unduh File Sertifikat
+          (JPG)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu__content">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-link">Beranda</a></li>
+        <li><a href="kurikulum.html" class="mobile-link">Kurikulum 8 Semester</a></li>
+        <li><a href="integrated-curr.html" class="mobile-link">Kurikulum Terintegrasi Mapping</a></li>
+        <li><a href="prasyarat_linkmap.html" class="mobile-link active">Prasyarat Mata Kuliah</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="kurikulum-hero">
+      <div class="container">
+
+        <h1 class="kurikulum-hero__title">
+          Peta Alur &amp; Prasyarat Mata Kuliah
+        </h1>
+
+
+        <!-- Hero Action Buttons -->
+        <div class="kurikulum-hero__actions">
+          <a href="kurikulum.html" class="btn btn--cyan btn--md">
+            <span>← Kembali ke Kartu Kurikulum</span>
+          </a>
+          <a href="integrated-curr.html" class="btn btn--outline-cyan btn--md">
+            <span>Lihat Kurikulum Terintegrasi ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION -->
+    <section class="kurikulum-body" style="padding-bottom: 80px;">
+      <div class="container" style="display:flex; justify-content:center; overflow-x:auto;">
+        <div class="master-container">
+          <div class="wrapper" id="mainWrapper">
+            <div class="curriculum-grid">
+              <div class="cell semester-col">Semester 8</div>
+              <div class="cell course-container">
+                <div class="course-box" id="final-project">Final Project</div>
+                <div class="course-box">English for Workspace Communication</div>
+                <div class="course-box" id="internship-report">Internship Report</div>
+              </div>
+
+              <div class="cell semester-col">Semester 7</div>
+              <div class="cell course-container">
+                <div class="course-box" id="internship">Industrial Internship</div>
+                <div class="course-box" id="scientific">Scientific Writing</div>
+                <div class="course-box" id="proposal">Final Project Proposal</div>
+              </div>
+
+              <div class="cell semester-col">Semester 6</div>
+              <div class="cell course-container">
+                <div class="course-box">Cyber Security Project</div>
+                <div class="course-box" id="iot">IoT Security</div>
+                <div class="course-box" id="statistic">Statistic and Probability</div>
+                <div class="course-box">Cyber Security Law and Ethics</div>
+                <div class="course-box" id="metho">Research Methodology</div>
+                <div class="course-box" id="policy">Cyber Security Policy and Audit</div>
+                <div class="course-box">AI for Cybersecurity</div>
+              </div>
+
+              <div class="cell semester-col">Semester 5</div>
+              <div class="cell course-container">
+                <div class="course-box" id="hacking">Ethical Hacking</div>
+                <div class="course-box" id="mobile">Mobile Security</div>
+                <div class="course-box" id="cloudsec">Cloud Computing Security</div>
+                <div class="course-box" id="forensic">Digital Forensic</div>
+                <div class="course-box" id="bcm">Business Continuity Management</div>
+                <div class="course-box">English Communication</div>
+                <div class="course-box">Entrepreneurship</div>
+              </div>
+
+              <div class="cell semester-col">Semester 4</div>
+              <div class="cell course-container">
+                <div class="course-box" id="web-pentest">Web Application Pentest</div>
+                <div class="course-box" id="database">Database Security</div>
+                <div class="course-box" id="devsecops">DevSecOps</div>
+                <div class="course-box" id="threat">Threat Intelligence Essential</div>
+                <div class="course-box" id="risk">Cyber Security Risk and Management</div>
+                <div class="course-box">General English</div>
+              </div>
+
+              <div class="cell semester-col">Semester 3</div>
+              <div class="course-container">
+                <div class="course-box" id="soc">SOC Essential</div>
+                <div class="course-box" id="internetworking">Internetworking</div>
+                <div class="course-box" id="net-def">Network Defender Essentials</div>
+                <div class="course-box" id="web-fund">Web Fundamental</div>
+                <div class="course-box" id="devops">DevOps</div>
+                <div class="course-box">Bahasa Indonesia</div>
+                <div class="course-box">Religious Education</div>
+              </div>
+
+              <div class="cell semester-col">Semester 2</div>
+              <div class="course-container">
+                <div class="course-box" id="sysadmin">Computer System Administration</div>
+                <div class="course-box" id="network">Computer Network</div>
+                <div class="course-box" id="windows">Windows Fundamental</div>
+                <div class="course-box" id="calculus">Calculus</div>
+                <div class="course-box" id="crypto">Applied Cryptography</div>
+                <div class="course-box">Civic Education</div>
+              </div>
+
+              <div class="cell semester-col">Semester 1</div>
+              <div class="course-container">
+                <div class="course-box">Fundamental of Cyber Security</div>
+                <div class="course-box" id="linux">Linux Fundamental</div>
+                <div class="course-box" id="alpro">Programming and Algorithm</div>
+                <div class="course-box">Fundamental of Physics</div>
+                <div class="course-box" id="discrete">Discrete Mathematics</div>
+                <div class="course-box">Pancasila Education</div>
+              </div>
+            </div>
+            <svg id="connection-layer"></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container site-footer__container">
+      <div class="footer-col footer-about">
+        <div class="footer-logo">
+          <img src="images/logo/rks.png" alt="Logo RKS" width="64" height="64" loading="lazy">
+          <span>D4 Rekayasa Keamanan Siber</span>
+        </div>
+        <p class="footer-desc">Program Studi DIV Rekayasa Keamanan Siber, Jurusan Teknik Informatika, Politeknik Negeri
+          Batam.</p>
+        <p class="footer-address">📍 Jalan Ahmad Yani, Batam Kota, Kota Batam, Kepulauan Riau 29461</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigasi Utama</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#profil">Profil Prodi</a></li>
+          <li><a href="kurikulum.html">Kurikulum 8 Semester</a></li>
+          <li><a href="integrated-curr.html">Kurikulum Terintegrasi Mapping</a></li>
+          <li><a href="prasyarat_linkmap.html">Prasyarat Mata Kuliah</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Akreditasi &amp; Legal</h4>
+        <ul class="footer-links">
+          <li><button class="footer-cert-link cert-popup-trigger" data-cert-img="dokumen/sertifikat_laminfokom.jpg"
+              data-cert-title="Sertifikat Akreditasi LAM INFOKOM (Baik Sekali)">Sertifikat LAM INFOKOM (Baik
+              Sekali)</button></li>
+          <li><button class="footer-cert-link cert-popup-trigger" data-cert-img="dokumen/sertifikat_iabee.jpg"
+              data-cert-title="Sertifikat Akreditasi IABEE">Sertifikat Akreditasi IABEE</button></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Akademi Mitra</h4>
+        <ul class="footer-links">
+          <li><a href="#">Cisco Networking Academy</a></li>
+          <li><a href="#">EC-Council Academic Partner</a></li>
+          <li><a href="#">AWS Academy</a></li>
+          <li><a href="#">RedHat Academy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom__container">
+        <p>&copy; 2026 D4 Rekayasa Keamanan Siber - Politeknik Negeri Batam. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const categoryColors = {
+      math: '#9333ea', system: '#ea580c', network: '#0ea5e9',
+      devops: '#ca8a04', appsec: '#16a34a', grc: '#475569', research: '#0d9488'
+    };
+
+    const connections = [
+      { ids: ['discrete', 'calculus'], cat: 'math' },
+      { ids: ['discrete', 'crypto'], cat: 'math' },
+      { ids: ['linux', 'sysadmin'], cat: 'system' },
+      { ids: ['linux', 'forensic'], cat: 'system' },
+      { ids: ['windows', 'forensic'], cat: 'system' },
+      { ids: ['devops', 'devsecops'], cat: 'devops' },
+      { ids: ['devsecops', 'cloudsec'], cat: 'devops' },
+      { ids: ['network', 'internetworking'], cat: 'network' },
+      { ids: ['network', 'net-def'], cat: 'network' },
+      { ids: ['sysadmin', 'soc'], cat: 'network' },
+      { ids: ['soc', 'threat'], cat: 'network' },
+      { ids: ['alpro', 'web-fund'], cat: 'appsec' },
+      { ids: ['alpro', 'mobile'], cat: 'appsec' },
+      { ids: ['alpro', 'iot'], cat: 'appsec' },
+      { ids: ['web-fund', 'database'], cat: 'appsec' },
+      { ids: ['web-fund', 'web-pentest'], cat: 'appsec' },
+      { ids: ['web-pentest', 'hacking'], cat: 'appsec' },
+      { ids: ['risk', 'bcm'], cat: 'grc' },
+      { ids: ['bcm', 'policy'], cat: 'grc' },
+      { ids: ['metho', 'scientific'], cat: 'research' },
+      { ids: ['proposal', 'final-project'], cat: 'research' },
+      { ids: ['internship', 'internship-report'], cat: 'research' }
+    ];
+
+    function drawLines(focusId = null) {
+      const svg = document.getElementById('connection-layer');
+      const wrapper = document.getElementById('mainWrapper');
+      svg.innerHTML = '';
+      const wrapperRect = wrapper.getBoundingClientRect();
+
+      let activeNodes = new Set();
+      let activeLines = new Set();
+
+      if (focusId) {
+        wrapper.classList.add('is-active');
+        activeNodes.add(focusId);
+
+        connections.forEach((conn, index) => {
+          if (conn.ids[0] === focusId) {
+            activeNodes.add(conn.ids[1]);
+            activeLines.add(index);
+          } else if (conn.ids[1] === focusId) {
+            activeNodes.add(conn.ids[0]);
+            activeLines.add(index);
+          }
+        });
+      } else {
+        wrapper.classList.remove('is-active');
+      }
+
+      connections.forEach((conn, index) => {
+        const startEl = document.getElementById(conn.ids[0]);
+        const endEl = document.getElementById(conn.ids[1]);
+
+        if (startEl && endEl) {
+          const isHighlighted = activeLines.has(index);
+          const startRect = startEl.getBoundingClientRect();
+          const endRect = endEl.getBoundingClientRect();
+          const color = isHighlighted ? '#00f0ff' : categoryColors[conn.cat];
+
+          const x1 = (startRect.left + startRect.width / 2) - wrapperRect.left;
+          const y1 = (startRect.bottom) - wrapperRect.top;
+          const x2 = (endRect.left + endRect.width / 2) - wrapperRect.left;
+          const y2 = (endRect.top) - wrapperRect.top;
+
+          const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          const cpY = y1 + (y2 - y1) / 2;
+          const d = `M ${x1} ${y1} C ${x1} ${cpY}, ${x2} ${cpY}, ${x2} ${y2}`;
+
+          path.setAttribute('d', d);
+          path.setAttribute('class', 'connector-line' + (isHighlighted ? ' highlight' : ''));
+          path.style.stroke = color;
+          svg.appendChild(path);
+
+          const diamond = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+          const size = 5;
+          const points = `${x2},${y2 - size} ${x2 + size},${y2} ${x2},${y2 + size} ${x2 - size},${y2}`;
+          diamond.setAttribute('points', points);
+          diamond.setAttribute('class', 'endpoint-diamond' + (isHighlighted ? ' highlight' : ''));
+          diamond.style.fill = color;
+          svg.appendChild(diamond);
+        }
+      });
+
+      document.querySelectorAll('.course-box').forEach(box => {
+        box.classList.toggle('highlight', activeNodes.has(box.id));
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      drawLines();
+      document.querySelectorAll('.course-box').forEach(box => {
+        box.addEventListener('click', (e) => {
+          e.stopPropagation();
+          drawLines(box.id);
+        });
+      });
+      document.addEventListener('click', () => drawLines(null));
+    });
+
+    window.addEventListener('load', () => setTimeout(() => drawLines(null), 100));
+    window.addEventListener('resize', () => drawLines(null));
+  </script>
+
+  <!-- Application Scripts -->
+  <script src="js/components.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/renderers.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

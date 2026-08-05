@@ -1,0 +1,96 @@
+{
+  "program_studi": "Applied Bachelor in Cyber Security Engineering",
+  "deskripsi": "A study program specializing in cybersecurity development for strategic industry needs. Graduates possess robust technical competence in cybersecurity, network defense, and incident response.",
+  "jenjang": "Applied Bachelor Degree (D4)",
+  "lama_studi": "8 Semesters",
+  "visi": "To be an excellent and competitive study program in the field of Cybersecurity in Southeast Asia.",
+  "misi": [
+    "Provide the best vocational education in Cybersecurity in Southeast Asia.",
+    "Conduct applied research based on partnerships with industry and society in Cybersecurity.",
+    "Carry out community empowerment activities in Cybersecurity.",
+    "Execute good and clean organizational governance."
+  ],
+  "tujuan": [
+    "Produce competent, skilled, and certified graduates in Cybersecurity.",
+    "Generate research in partnership with industry and society in Cybersecurity.",
+    "Actively participate in raising public awareness of Cybersecurity.",
+    "Realize good and clean organizational governance aligned with international standards."
+  ],
+  "sasaran": [
+    "Increase the quality and access to learning services in Cybersecurity.",
+    "Increase the relevance, competitiveness, and independence of Cybersecurity graduates.",
+    "Increase the quality and publication of research generated in Cybersecurity.",
+    "Increase the utilization of research outcomes and community service in Cybersecurity.",
+    "Increase the quality of service performance and good, clean governance in the study program."
+  ],
+  "program_educational_objectives": {
+    "deskripsi": "Broad statements describing career and professional accomplishments that the program prepares graduates to achieve 3 to 5 years after graduation.",
+    "target_waktu": "3 to 5 years post-graduation",
+    "profil_profesional_mandiri": [
+      "Graduates actively and innovatively contribute to identifying, analyzing, and solving complex cybersecurity challenges across global industries through ethical and state-of-the-art information technology.",
+      "Graduates continuously advance their cybersecurity expertise in technical, regulatory, and governance domains through applied research, professional community leadership, and lifelong learning.",
+      "Graduates creatively and professionally engineer cybersecurity solutions, products, and services tailored to evolving technological paradigms and global societal needs."
+    ]
+  },
+  "kompetensi_lulusan": [
+    "Ability and skill to respond to organizational security threats effectively.",
+    "Ability to execute and report cybersecurity risk management implementation plans.",
+    "Ability to analyze internal and external network security threats and establish robust security policies.",
+    "Ability and skill to analyze and assess cybersecurity vulnerabilities.",
+    "Ability to design comprehensive cybersecurity risk awareness programs.",
+    "Ability to conduct systematic system vulnerability assessments within enterprise environments.",
+    "Ability to install and configure security mechanisms for institutional assets.",
+    "Ability to install and configure enterprise-scale network infrastructures.",
+    "Ability to install and configure computers, software applications, and network components."
+  ],
+  "capaian_pembelajaran_lulusan": [
+    "Ability to identify and apply mathematics, natural sciences, computing, and engineering fundamentals appropriate to cybersecurity procedures, processes, and methodologies.",
+    "Ability to identify, formulate, research literature, and analyze broadly-defined engineering problems using validated analytical tools.",
+    "Ability to design systems, components, or processes meeting identified security needs considering health, safety, economic, societal, and environmental impacts.",
+    "Ability to investigate broadly-defined engineering problems using database code, literature research, and structured experiments.",
+    "Ability to select and utilize modern prediction tools, modeling, and IT resources to solve engineering problems.",
+    "Ability to consistently uphold professional ethics, national and international legal compliance, and embrace diversity and inclusion.",
+    "Ability to function effectively as an individual, team member, or leader in diverse, inclusive, and multidisciplinary environments.",
+    "Ability to communicate effectively in written, oral, and graphical formats across diverse technical and public communities.",
+    "Ability to apply engineering management principles to multidisciplinary projects as a member or leader.",
+    "Ability to engage in independent lifelong learning, critical thinking, and continuous professional development."
+  ],
+  "peluang_kerja_lulusan": [
+    {
+      "posisi": "Cyber Security Analyst",
+      "deskripsi": "Responsible for monitoring, detecting, and mitigating security threats in Security Operations Centers (SOC) and enforcing operational security procedures."
+    },
+    {
+      "posisi": "Cyber Security Administrator",
+      "deskripsi": "Executes cybersecurity controls and maintains compliance reporting according to enterprise risk management blueprints."
+    },
+    {
+      "posisi": "Network Security Administrator",
+      "deskripsi": "Analyzes perimeter and internal network threats, deploying firewalls, IDS/IPS, and enforcing network access control policies."
+    },
+    {
+      "posisi": "Vulnerability Assessment Analyst",
+      "deskripsi": "Performs security audits, vulnerability scanning, and vulnerability remediation testing across enterprise IT systems."
+    },
+    {
+      "posisi": "Cyber Security Awareness Manager",
+      "deskripsi": "Manages cybersecurity governance, conducts risk assessments, and enforces security awareness programs."
+    },
+    {
+      "posisi": "Junior Cyber Security Specialist",
+      "deskripsi": "Conducts security gap assessments and assists in hardening software and system architecture."
+    },
+    {
+      "posisi": "IT Security Operator",
+      "deskripsi": "Maintains secure server operations, operating system hardening, patch management, and emergency troubleshooting."
+    },
+    {
+      "posisi": "Network Administrator",
+      "deskripsi": "Installs, configures, and supports LAN, WAN, router, switch, and cloud network infrastructure."
+    },
+    {
+      "posisi": "IT Support & Systems Specialist",
+      "deskripsi": "Deploys and maintains secure web servers, network applications, and end-user computing infrastructure."
+    }
+  ]
+}

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Kurikulum Terintegrasi &amp; Skill Mapping | D4 Rekayasa Keamanan Siber Polibatam</title>
+  <meta name="title" content="Kurikulum Terintegrasi &amp; Skill Mapping | D4 Rekayasa Keamanan Siber Polibatam">
+  <meta name="description"
+    content="Pemetaan Kurikulum Terintegrasi CDIO & Skill Matrix Sarjana Terapan (D4) Rekayasa Keamanan Siber Polibatam.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo/rks.png" type="image/png">
+
+  <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, DM Sans, & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --bg-body: #f8fafc;
+      --sidebar-year: #1e293b;
+      --sidebar-project: #64748b;
+
+      --product-dev: #104baa;
+      --written-comm: #7c3aed;
+      --comm-english: #0d9488;
+      --system-thinking: #b07f06;
+      --teamwork: #348800;
+      --professional-skills: #ea580c;
+
+      --text-light: #ffffff;
+      --border-color: #e2e8f0;
+    }
+
+    .wrapper {
+      max-width: 1800px;
+      width: 100%;
+      background-color: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* Legend Section */
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 12px;
+      padding: 20px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 20px;
+      color: #334155;
+      background-color: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .legend-item:hover {
+      transform: translateY(-1px);
+      background-color: #e2e8f0;
+    }
+
+    .legend-item.active {
+      border-color: var(--cyan-bright);
+      background-color: #1e293b;
+      color: white;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Grid Structure */
+    .curriculum-grid {
+      display: grid;
+      grid-template-columns: 130px 150px 110px auto;
+    }
+
+    .cell {
+      padding: 15px;
+      border-bottom: 1px solid var(--border-color);
+      border-right: 1px solid var(--border-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .year-col {
+      background-color: var(--sidebar-year);
+      color: var(--text-light);
+      font-weight: 700;
+      flex-direction: column;
+    }
+
+    .year-col span {
+      font-weight: 400;
+      font-size: 9px;
+      margin-top: 8px;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .project-col {
+      background-color: var(--sidebar-project);
+      color: var(--text-light);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .semester-col {
+      font-weight: 600;
+      background-color: #ffffff;
+      color: #1e293b;
+    }
+
+    .course-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 22px;
+      justify-content: flex-start;
+      background-color: #fff;
+    }
+
+    .course-box {
+      width: 125px;
+      min-height: 35px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.3;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    /* Filter Interaction Class */
+    .course-box.faded {
+      opacity: 0.1;
+      filter: grayscale(1);
+      pointer-events: none;
+    }
+
+    .course-box:not(.faded):hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+
+    /* Specific Item Coloring */
+    .pd {
+      background-color: var(--product-dev);
+    }
+
+    .wc {
+      background-color: var(--written-comm);
+    }
+
+    .ce {
+      background-color: var(--comm-english);
+    }
+
+    .st {
+      background-color: var(--system-thinking);
+    }
+
+    .tw {
+      background-color: var(--teamwork);
+    }
+
+    .ps {
+      background-color: var(--professional-skills);
+    }
+
+    /* Helpers for Legend Dots */
+    .dot.pd {
+      background-color: var(--product-dev);
+    }
+
+    .dot.wc {
+      background-color: var(--written-comm);
+    }
+
+    .dot.st {
+      background-color: var(--system-thinking);
+    }
+
+    .dot.tw {
+      background-color: var(--teamwork);
+    }
+
+    .dot.ce {
+      background-color: var(--comm-english);
+    }
+
+    .dot.ps {
+      background-color: var(--professional-skills);
+    }
+
+    /* Dark Theme Overrides */
+    [data-theme="dark"] .wrapper {
+      background-color: var(--bg-card);
+      border-color: var(--border-subtle);
+    }
+
+    [data-theme="dark"] .legend {
+      background-color: var(--bg-card);
+      border-color: var(--border-subtle);
+    }
+
+    [data-theme="dark"] .legend-item {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      border-color: var(--border-subtle);
+    }
+
+    [data-theme="dark"] .cell {
+      border-color: var(--border-subtle);
+    }
+
+    [data-theme="dark"] .semester-col {
+      background-color: #0b1120;
+      color: var(--text-main);
+    }
+
+    [data-theme="dark"] .course-container {
+      background-color: var(--bg-base);
+    }
+
+    [data-theme="dark"] .year-col {
+      background-color: #0f172a;
+    }
+
+    [data-theme="dark"] .project-col {
+      background-color: #1e293b;
+    }
+  </style>
+</head>
+
+<body class="dark-theme">
+
+  <!-- 1. STREAMLINED SITE HEADER & MEGAMENU -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__container">
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="site-header__logo" aria-label="Beranda RKS Polibatam">
+        <div class="logo-cyan-box">
+          <img src="images/logo/rks.png" alt="Logo Rekayasa Keamanan Siber Polibatam" class="logo-img" width="64"
+            height="64">
+        </div>
+        <div class="logo-text">
+          <span class="brand-title" id="i18n-brand-title">REKAYASA KEAMANAN SIBER</span>
+          <span class="brand-subtitle">Politeknik Negeri Batam</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="site-header__nav" aria-label="Navigasi Utama">
+        <ul class="nav-list">
+
+          <!-- Menu 1: Profil & Akademik -->
+          <li class="nav-item has-megamenu">
+            <a href="index.html#profil" class="nav-link">
+              <span id="i18n-nav-profil">Profil &amp; Akademik</span>
+              <svg class="chevron-svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </a>
+            <div class="megamenu">
+              <div class="megamenu__inner">
+                <div class="megamenu__col">
+                  <h4 class="megamenu__heading" id="i18n-mm-tentang">Tentang D4 RKS</h4>
+                  <ul class="megamenu__links">
+                    <li><a href="index.html#profil"><span class="icon-dot"></span> <span id="i18n-mm-overview">Gambaran
+                          Umum &amp; Keunggulan</span></a></li>
+                    <li><a href="index.html#komitmen"><span class="icon-dot"></span> <span id="i18n-mm-visi">Visi, Misi,
+                          Tujuan &amp; Sasaran</span></a></li>
+                    <li><a href="index.html#peo"><span class="icon-dot"></span> <span id="i18n-mm-peo">PEO (Tujuan
+                          Pendidikan)</span></a></li>
+                    <li><a href="index.html#dosen"><span class="icon-dot"></span> <span id="i18n-mm-dosen">Tim Dosen
+                          &amp;
+                          Pengajar</span></a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__col">
+                  <h4 class="megamenu__heading" id="i18n-mm-standar">Akreditasi Global</h4>
+                  <div class="megamenu-badges">
+                    <button class="badge-img-btn cert-popup-trigger" data-cert-img="dokumen/sertifikat_laminfokom.jpg"
+                      data-cert-title="Sertifikat Akreditasi LAM INFOKOM (Baik Sekali)"
+                      title="Lihat Sertifikat LAM INFOKOM">
+                      <img src="images/logo/laminfokom.png" alt="LAM INFOKOM Baik Sekali" class="badge-img" width="110"
+                        height="34" loading="lazy">
+                      <span class="badge-tag-text">BAIK SEKALI</span>
+                    </button>
+                    <button class="badge-img-btn cert-popup-trigger" data-cert-img="dokumen/sertifikat_iabee.jpg"
+                      data-cert-title="Sertifikat Akreditasi IABEE" title="Lihat Sertifikat IABEE">
+                      <img src="images/logo/iabee.png" alt="IABEE Standard" class="badge-img" width="110" height="34"
+                        loading="lazy">
+                      <span class="badge-tag-text">PROVISIONAL</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Menu 2: Kurikulum & Karir (Active State) -->
+          <li class="nav-item has-megamenu">
+            <a href="kurikulum.html" class="nav-link active" style="color: var(--cyan-bright);">
+              <span id="i18n-nav-kurikulum">Kurikulum 8 Semester</span>
+              <svg class="chevron-svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </a>
+            <div class="megamenu">
+              <div class="megamenu__inner">
+                <div class="megamenu__col">
+                  <h4 class="megamenu__heading">Struktur Kurikulum</h4>
+                  <ul class="megamenu__links">
+                    <li><a href="kurikulum.html"><span class="icon-dot"></span> <span>Matriks 8 Semester</span></a></li>
+                    <li><a href="integrated-curr.html"><span class="icon-dot"></span> <span>Kurikulum Terintegrasi
+                          Mapping</span></a></li>
+                    <li><a href="prasyarat_linkmap.html"><span class="icon-dot"></span> <span>Prasyarat Mata
+                          Kuliah</span></a></li>
+                  </ul>
+                </div>
+                <div class="megamenu__col">
+                  <h4 class="megamenu__heading">Fasilitas &amp; Karir</h4>
+                  <ul class="megamenu__links">
+                    <li><a href="index.html#fasilitas"><span class="icon-dot"></span> <span>Lab SOC 24/7
+                          Monitoring</span></a></li>
+                    <li><a href="index.html#karir"><span class="icon-dot"></span> <span id="i18n-mm-karir">Prospek Karir
+                          Lulusan</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Action Controls Group -->
+      <div class="site-header__actions">
+        <!-- Compact Command Search Button -->
+        <button class="header-search-btn" id="command-search-trigger" title="Cari di RKS (Ctrl+K / /)"
+          aria-label="Buka Pencarian">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-btn-text" id="global-search-input">Cari matkul, sertifikasi...</span>
+          <kbd class="search-shortcut">Ctrl+K</kbd>
+        </button>
+
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" title="Ganti Tema (Dark / Light)"
+          aria-label="Ganti Tema">
+          <svg class="theme-icon theme-icon-dark" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <svg class="theme-icon theme-icon-light" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+          </svg>
+        </button>
+
+        <!-- Multilingual Language Toggle -->
+        <div class="lang-switcher" id="lang-switcher" aria-label="Pilih Bahasa">
+          <button class="lang-btn active" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" data-lang="en" aria-label="English Language">EN</button>
+        </div>
+
+        <a href="index.html#pmb" class="btn btn--cyan btn--sm" id="i18n-btn-pmb">Daftar↗</a>
+
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Buka Menu Mobile">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- SEARCH COMMAND PALETTE MODAL -->
+  <div class="command-modal-overlay" id="command-modal-overlay">
+    <div class="command-modal">
+      <div class="command-modal__header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <input type="text" id="command-modal-input" placeholder="Cari mata kuliah (Pentest, SOC, Python, DFIR)..."
+          autofocus>
+        <kbd class="command-esc">ESC</kbd>
+      </div>
+      <div class="command-modal__body" id="command-modal-results"></div>
+      <div class="command-modal__footer">
+        <span><kbd>↑</kbd> <kbd>↓</kbd> Navigasi</span>
+        <span><kbd>↵</kbd> Pilih</span>
+        <span><kbd>ESC</kbd> Tutup</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATE LIGHTBOX POPUP MODAL -->
+  <div class="cert-modal-overlay" id="cert-modal-overlay">
+    <div class="cert-modal">
+      <div class="cert-modal__header">
+        <span class="cert-modal__title" id="cert-modal-title">Sertifikat Akreditasi Program Studi</span>
+        <button class="cert-modal__close" id="cert-modal-close" aria-label="Tutup Popup">&times;</button>
+      </div>
+      <div class="cert-modal__body">
+        <img id="cert-modal-img" src="" alt="Sertifikat Akreditasi RKS Polibatam" loading="lazy">
+      </div>
+      <div class="cert-modal__footer">
+        <a id="cert-modal-download" href="" target="_blank" download class="btn btn--cyan btn--sm">Unduh File Sertifikat
+          (JPG)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu__content">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-link">Beranda</a></li>
+        <li><a href="kurikulum.html" class="mobile-link">Kurikulum 8 Semester</a></li>
+        <li><a href="integrated-curr.html" class="mobile-link active">Kurikulum Terintegrasi Mapping</a></li>
+        <li><a href="prasyarat_linkmap.html" class="mobile-link">Prasyarat Mata Kuliah</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="kurikulum-hero">
+      <div class="container">
+
+        <h1 class="kurikulum-hero__title">
+          Kurikulum Terintegrasi Mapping
+        </h1>
+
+
+        <!-- Hero Action Buttons -->
+        <div class="kurikulum-hero__actions">
+          <a href="kurikulum.html" class="btn btn--cyan btn--md">
+            <span>← Kembali ke Kartu Kurikulum</span>
+          </a>
+          <a href="prasyarat_linkmap.html" class="btn btn--outline-cyan btn--md">
+            <span>Lihat Peta Prasyarat ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION -->
+    <section class="kurikulum-body" style="padding-bottom: 80px;">
+      <div class="container" style="display:flex; justify-content:center; overflow-x:auto;">
+        <div class="wrapper">
+          <div class="legend">
+            <div class="legend-item active" onclick="filterCourses('all', this)">All Skills</div>
+            <div class="legend-item" onclick="filterCourses('pd', this)">
+              <div class="dot pd"></div> Product Development
+            </div>
+            <div class="legend-item" onclick="filterCourses('wc', this)">
+              <div class="dot wc"></div> Written Communication
+            </div>
+            <div class="legend-item" onclick="filterCourses('st', this)">
+              <div class="dot st"></div> System Thinking
+            </div>
+            <div class="legend-item" onclick="filterCourses('tw', this)">
+              <div class="dot tw"></div> Team Work
+            </div>
+            <div class="legend-item" onclick="filterCourses('ce', this)">
+              <div class="dot ce"></div> Communication in English
+            </div>
+            <div class="legend-item" onclick="filterCourses('ps', this)">
+              <div class="dot ps"></div> Professional Skills
+            </div>
+          </div>
+
+          <div class="curriculum-grid">
+            <div class="cell year-col" style="grid-row: span 2;">YEAR 4<span>CDIO skills are proficient</span></div>
+            <div class="cell project-col" style="grid-row: span 2;">Project Capstone</div>
+            <div class="cell semester-col">Semester 8</div>
+            <div class="cell course-container">
+              <div class="course-box tw">Final Project</div>
+              <div class="course-box ce">English for Workspace Communication</div>
+              <div class="course-box wc">Internship Report</div>
+            </div>
+            <div class="cell semester-col">Semester 7</div>
+            <div class="cell course-container">
+              <div class="course-box ps">Industrial Internship</div>
+              <div class="course-box wc">Scientific Writing</div>
+              <div class="course-box wc">Final Project Proposal</div>
+            </div>
+
+            <div class="cell year-col" style="grid-row: span 2;">YEAR 3<span>CDIO skills are strengthened</span></div>
+            <div class="cell project-col" style="grid-row: span 2;">Project Keystone</div>
+            <div class="cell semester-col">Semester 6</div>
+            <div class="cell course-container">
+              <div class="course-box tw">Cyber Security Project</div>
+              <div class="course-box pd">IoT Security</div>
+              <div class="course-box st">Statistic and Probability</div>
+              <div class="course-box ps">Cyber Security Law and Ethics</div>
+              <div class="course-box wc">Research Methodology</div>
+              <div class="course-box st">Cyber Security Policy and Audit</div>
+              <div class="course-box pd">AI for Cybersecurity</div>
+            </div>
+            <div class="cell semester-col">Semester 5</div>
+            <div class="cell course-container">
+              <div class="course-box pd">Ethical Hacking</div>
+              <div class="course-box pd">Mobile Security</div>
+              <div class="course-box pd">Cloud Computing Security</div>
+              <div class="course-box pd">Digital Forensic</div>
+              <div class="course-box st">Business Continuity Management</div>
+              <div class="course-box ce">English Communication</div>
+              <div class="course-box ps">Entrepreneurship</div>
+            </div>
+
+            <div class="cell year-col">YEAR 2<span>CDIO skills are reinforced</span></div>
+            <div class="cell project-col" style="grid-row: span 4;">Project Cornerstone</div>
+            <div class="cell semester-col">Semester 4</div>
+            <div class="cell course-container">
+              <div class="course-box pd">Web Application Pentest</div>
+              <div class="course-box pd">Database Security</div>
+              <div class="course-box pd">DevSecOps</div>
+              <div class="course-box pd">Threat Intelligence Essential</div>
+              <div class="course-box st">Cyber Security Risk and Management</div>
+              <div class="course-box ce">General English</div>
+            </div>
+
+            <div class="cell year-col" style="grid-row: span 3;">YEAR 1.5<span>CDIO skills are introduced</span></div>
+            <div class="cell semester-col">Semester 3</div>
+            <div class="cell course-container">
+              <div class="course-box pd">SOC Essential</div>
+              <div class="course-box pd">Internetworking</div>
+              <div class="course-box pd">Network Defender Essentials</div>
+              <div class="course-box pd">Web Fundamental</div>
+              <div class="course-box pd">DevOps</div>
+              <div class="course-box st">Bahasa Indonesia</div>
+              <div class="course-box ps">Religious Education</div>
+            </div>
+            <div class="cell semester-col">Semester 2</div>
+            <div class="cell course-container">
+              <div class="course-box pd">Computer System Administration</div>
+              <div class="course-box pd">Computer Network</div>
+              <div class="course-box pd">Windows Fundamental</div>
+              <div class="course-box st">Calculus</div>
+              <div class="course-box pd">Applied Cryptography</div>
+              <div class="course-box ps">Civic Education</div>
+            </div>
+            <div class="cell semester-col">Semester 1</div>
+            <div class="cell course-container">
+              <div class="course-box st">Fundamental of Cyber Security</div>
+              <div class="course-box pd">Programming and Algorithm</div>
+              <div class="course-box pd">Linux Fundamental</div>
+              <div class="course-box st">Fundamental of Physics</div>
+              <div class="course-box st">Discrete Mathematics</div>
+              <div class="course-box ps">Pancasila Education</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container site-footer__container">
+      <div class="footer-col footer-about">
+        <div class="footer-logo">
+          <img src="images/logo/rks.png" alt="Logo RKS" width="64" height="64" loading="lazy">
+          <span>D4 Rekayasa Keamanan Siber</span>
+        </div>
+        <p class="footer-desc">Program Studi DIV Rekayasa Keamanan Siber, Jurusan Teknik Informatika, Politeknik Negeri
+          Batam.</p>
+        <p class="footer-address">📍 Jalan Ahmad Yani, Batam Kota, Kota Batam, Kepulauan Riau 29461</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigasi Utama</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#profil">Profil Prodi</a></li>
+          <li><a href="kurikulum.html">Kurikulum 8 Semester</a></li>
+          <li><a href="integrated-curr.html">Kurikulum Terintegrasi Mapping</a></li>
+          <li><a href="prasyarat_linkmap.html">Prasyarat Mata Kuliah</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Akreditasi &amp; Legal</h4>
+        <ul class="footer-links">
+          <li><button class="footer-cert-link cert-popup-trigger" data-cert-img="dokumen/sertifikat_laminfokom.jpg"
+              data-cert-title="Sertifikat Akreditasi LAM INFOKOM (Baik Sekali)">Sertifikat LAM INFOKOM (Baik
+              Sekali)</button></li>
+          <li><button class="footer-cert-link cert-popup-trigger" data-cert-img="dokumen/sertifikat_iabee.jpg"
+              data-cert-title="Sertifikat Akreditasi IABEE">Sertifikat Akreditasi IABEE</button></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Akademi Mitra</h4>
+        <ul class="footer-links">
+          <li><a href="#">Cisco Networking Academy</a></li>
+          <li><a href="#">EC-Council Academic Partner</a></li>
+          <li><a href="#">AWS Academy</a></li>
+          <li><a href="#">RedHat Academy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom__container">
+        <p>&copy; 2026 D4 Rekayasa Keamanan Siber - Politeknik Negeri Batam. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function filterCourses(category, element) {
+      const items = document.querySelectorAll('.legend-item');
+      items.forEach(item => item.classList.remove('active'));
+      element.classList.add('active');
+
+      const courses = document.querySelectorAll('.course-box');
+      courses.forEach(course => {
+        if (category === 'all') {
+          course.classList.remove('faded');
+        } else {
+          if (course.classList.contains(category)) {
+            course.classList.remove('faded');
+          } else {
+            course.classList.add('faded');
+          }
+        }
+      });
+    }
+  </script>
+
+  <!-- Application Scripts -->
+  <script src="js/components.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/renderers.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

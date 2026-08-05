@@ -1,0 +1,122 @@
+{
+  "categoryColors": {
+    "math": "#9333ea",
+    "system": "#ea580c",
+    "network": "#0ea5e9",
+    "devops": "#ca8a04",
+    "appsec": "#16a34a",
+    "grc": "#475569",
+    "research": "#0d9488"
+  },
+  "connections": [
+    { "ids": ["discrete", "calculus"], "cat": "math" },
+    { "ids": ["discrete", "crypto"], "cat": "math" },
+    { "ids": ["linux", "sysadmin"], "cat": "system" },
+    { "ids": ["linux", "forensic"], "cat": "system" },
+    { "ids": ["windows", "forensic"], "cat": "system" },
+    { "ids": ["devops", "devsecops"], "cat": "devops" },
+    { "ids": ["devsecops", "cloudsec"], "cat": "devops" },
+    { "ids": ["network", "internetworking"], "cat": "network" },
+    { "ids": ["network", "net-def"], "cat": "network" },
+    { "ids": ["sysadmin", "soc"], "cat": "network" },
+    { "ids": ["soc", "threat"], "cat": "network" },
+    { "ids": ["alpro", "web-fund"], "cat": "appsec" },
+    { "ids": ["alpro", "mobile"], "cat": "appsec" },
+    { "ids": ["alpro", "iot"], "cat": "appsec" },
+    { "ids": ["web-fund", "database"], "cat": "appsec" },
+    { "ids": ["web-fund", "web-pentest"], "cat": "appsec" },
+    { "ids": ["web-pentest", "hacking"], "cat": "appsec" },
+    { "ids": ["risk", "bcm"], "cat": "grc" },
+    { "ids": ["bcm", "policy"], "cat": "grc" },
+    { "ids": ["metho", "scientific"], "cat": "research" },
+    { "ids": ["proposal", "final-project"], "cat": "research" },
+    { "ids": ["internship", "internship-report"], "cat": "research" }
+  ],
+  "semesters": [
+    {
+      "label": "Semester 8",
+      "courses": [
+        { "name": "Final Project", "id": "final-project" },
+        { "name": "English for Workspace Communication" },
+        { "name": "Internship Report", "id": "internship-report" }
+      ]
+    },
+    {
+      "label": "Semester 7",
+      "courses": [
+        { "name": "Industrial Internship", "id": "internship" },
+        { "name": "Scientific Writing", "id": "scientific" },
+        { "name": "Final Project Proposal", "id": "proposal" }
+      ]
+    },
+    {
+      "label": "Semester 6",
+      "courses": [
+        { "name": "Cyber Security Project" },
+        { "name": "IoT Security", "id": "iot" },
+        { "name": "Statistic and Probability", "id": "statistic" },
+        { "name": "Cyber Security Law and Ethics" },
+        { "name": "Research Methodology", "id": "metho" },
+        { "name": "Cyber Security Policy and Audit", "id": "policy" },
+        { "name": "AI for Cybersecurity" }
+      ]
+    },
+    {
+      "label": "Semester 5",
+      "courses": [
+        { "name": "Ethical Hacking", "id": "hacking" },
+        { "name": "Mobile Security", "id": "mobile" },
+        { "name": "Cloud Computing Security", "id": "cloudsec" },
+        { "name": "Digital Forensic", "id": "forensic" },
+        { "name": "Business Continuity Management", "id": "bcm" },
+        { "name": "English Communication" },
+        { "name": "Entrepreneurship" }
+      ]
+    },
+    {
+      "label": "Semester 4",
+      "courses": [
+        { "name": "Web Application Pentest", "id": "web-pentest" },
+        { "name": "Database Security", "id": "database" },
+        { "name": "DevSecOps", "id": "devsecops" },
+        { "name": "Threat Intelligence Essential", "id": "threat" },
+        { "name": "Cyber Security Risk and Management", "id": "risk" },
+        { "name": "General English" }
+      ]
+    },
+    {
+      "label": "Semester 3",
+      "courses": [
+        { "name": "SOC Essential", "id": "soc" },
+        { "name": "Internetworking", "id": "internetworking" },
+        { "name": "Network Defender Essentials", "id": "net-def" },
+        { "name": "Web Fundamental", "id": "web-fund" },
+        { "name": "DevOps", "id": "devops" },
+        { "name": "Bahasa Indonesia" },
+        { "name": "Religious Education" }
+      ]
+    },
+    {
+      "label": "Semester 2",
+      "courses": [
+        { "name": "Computer System Administration", "id": "sysadmin" },
+        { "name": "Computer Network", "id": "network" },
+        { "name": "Windows Fundamental", "id": "windows" },
+        { "name": "Calculus", "id": "calculus" },
+        { "name": "Applied Cryptography", "id": "crypto" },
+        { "name": "Civic Education" }
+      ]
+    },
+    {
+      "label": "Semester 1",
+      "courses": [
+        { "name": "Fundamental of Cyber Security" },
+        { "name": "Linux Fundamental", "id": "linux" },
+        { "name": "Programming and Algorithm", "id": "alpro" },
+        { "name": "Fundamental of Physics" },
+        { "name": "Discrete Mathematics", "id": "discrete" },
+        { "name": "Pancasila Education" }
+      ]
+    }
+  ]
+}

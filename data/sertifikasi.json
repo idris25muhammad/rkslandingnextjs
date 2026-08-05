@@ -1,0 +1,18 @@
+[
+  { "name": "EC-Council Certified Ethical Hacker (CEH)", "img": "/images/sertifikasi/Certified Ethical Hacker (CEH).webp" },
+  { "name": "EC-Council Certified Network Defender (CND)", "img": "/images/sertifikasi/Certified Network Defender (CND).webp" },
+  { "name": "EC-Council Certified SOC Analyst (CSA)", "img": "/images/sertifikasi/Certified SOC Analyst (CSA).webp" },
+  { "name": "EC-Council Computer Hacking Forensic Investigator (CHFI)", "img": "/images/sertifikasi/Computer Hacking Forensic Investigator (CHFI).webp" },
+  { "name": "EC-Council Certified Cybersecurity Technician (CCT)", "img": "/images/sertifikasi/Certified Cybersecurity Technician Certification (CCT).webp" },
+  { "name": "Cisco CyberOps Associate", "img": "/images/sertifikasi/Cyberops Associate.png" },
+  { "name": "Cisco CCNA Security & Automation", "img": "/images/sertifikasi/CCNAv7 Enterprise Networking, Security, and Automation.png" },
+  { "name": "Cisco CCNA Switching & Routing", "img": "/images/sertifikasi/CCNAv7 Switching, Routing, and Wireless Essentials.png" },
+  { "name": "AWS Certified Cloud Practitioner", "img": "/images/sertifikasi/AWS_Certified Cloud Practitioner.png" },
+  { "name": "CertNexus Certified IoT Practitioner (CIoTP)", "img": "/images/sertifikasi/CertNexus Certified Internet of Things Practitioner (CIoTP).png" },
+  { "name": "Certified AppSec Practitioner (CAP)", "img": "/images/sertifikasi/Certified AppSec Practitioner.png" },
+  { "name": "Certified DevSecOps Professional", "img": "/images/sertifikasi/Certified DevSecOps.jpg" },
+  { "name": "SECO Ethical Hacking Practitioner (S-EHP)", "img": "/images/sertifikasi/Ethical Hacking Practitioner (S-EHP).png" },
+  { "name": "SECO IT-Security Practitioner (S-ITSP)", "img": "/images/sertifikasi/IT-Security Practitioner (S-ITSP).png" },
+  { "name": "SECO Information Security Foundation", "img": "/images/sertifikasi/Information Security Foundation (S-ISF).png" },
+  { "name": "Microsoft Certified Educator (MCE)", "img": "/images/sertifikasi/MCE Microsoft Certified Educator.png" }
+]

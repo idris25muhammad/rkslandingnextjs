@@ -1,0 +1,173 @@
+[
+  {
+    "nama": "Maidel Fani, S.Pd., M.Kom.",
+    "jabatan": "Kepala Program Studi Rekayasa Keamanan Siber",
+    "nidn_nik": "117192",
+    "pendidikan_terakhir": "Magister Strata 2 (S2)",
+    "email": "maidelfani@polibatam.ac.id",
+    "foto": "images/tim_prodi/MD.jpeg",
+    "riwayat_pendidikan": [
+      "Sarjana (S1) STAIN Bukittinggi : Pendidikan Teknik Informatika dan Komputer",
+      "Magister (S2) Universitas Putra Indonesia YPTK Padang : Ilmu Komputer"
+    ],
+    "bidang_spesialis": "Ilmu Komputer"
+  },
+  {
+    "nama": "Hamdani Arif, S.Pd., M.Sc",
+    "jabatan": "Dosen",
+    "nidn_nik": "117175",
+    "pendidikan_terakhir": "Magister Strata 2 (S2)",
+    "email": "hamdaniarif@polibatam.ac.id",
+    "foto": "images/tim_prodi/HA.jpeg",
+    "riwayat_pendidikan": [
+      "Sarjana (S1) Univ. Negeri Malang : Teknik Informatika",
+      "Magister (S2) Chang Gung University : Computer Science & Information Engineering"
+    ],
+    "bidang_spesialis": "Networking, IoT"
+  },
+  {
+    "nama": "Nur Cahyono Kushardianto, S.Si., M.T., M.Sc, Ph.D",
+    "jabatan": "Dosen",
+    "nidn_nik": "106044",
+    "pendidikan_terakhir": "Doktoral Strata 3 (S3)",
+    "email": "anung@polibatam.ac.id",
+    "foto": "images/tim_prodi/NC.jpeg",
+    "riwayat_pendidikan": [
+      "Sarjana (S1) Institut Teknologi Bandung : Matematika",
+      "Magister (S2) Universitas Indonesia : Jaringan Informasi dan Multimedia",
+      "Magister (S2) Université de Valenciennes et du Hainaut-Cambrésis : Teknik Sistem Komunikasi",
+      "Doktor (S3) Université Polytechnique Hauts-de-France : Electronics"
+    ],
+    "bidang_spesialis": "Jaringan Komputer, Teknologi Komunikasi, dan Machine Learning"
+  },
+  {
+    "nama": "Andy Triwinarko, ST, M.T., Ph.D",
+    "jabatan": "Dosen",
+    "nidn_nik": "105038",
+    "pendidikan_terakhir": "Doktoral Strata 3 (S3)",
+    "email": "andy@polibatam.ac.id",
+    "foto": "images/tim_prodi/AT.jpeg",
+    "riwayat_pendidikan": [
+      "Sarjana (S1) Institut Teknologi Bandung : Teknik Informatika",
+      "Magister (S2) Universitas Indonesia : Teknik Elektro",
+      "Doktor (S3) Université Polytechnique Hauts-de-France : Électronique"
+    ],
+    "bidang_spesialis": "Telecommunication, Informatics"
+  },
+  {
+    "nama": "Agus Fatulloh, S.T., M.T",
+    "jabatan": "Dosen",
+    "nidn_nik": "107051",
+    "pendidikan_terakhir": "Magister Strata 2 (S2)",
+    "email": "agusf@polibatam.ac.id",
+    "foto": "images/tim_prodi/AU.jpeg",
+    "riwayat_pendidikan": [
+      "Sarjana (S1) Sekolah Tinggi Sains dan Teknologi Indonesia Bandung : Teknik Informatika",
+      "Magister (S2) Institut Teknologi Bandung : Teknik Elektro"
+    ],
+    "bidang_spesialis": "Computer Organization and Architecture, Operating System, Networking and Hardware Technology, Computer Engineering, Software Applications Development, Social Computing"
+  },
+  {
+    "nama": "Supardianto, M.Eng.",
+    "jabatan": "Dosen",
+    "nidn_nik": "113105",
+    "pendidikan_terakhir": "Magister Strata 2 (S2)",
+    "email": "supardianto@polibatam.ac.id",
+    "foto": "images/tim_prodi/SP.png",
+    "riwayat_pendidikan": [
+      "Sarjana (S1) Institut Teknologi Bandung : Teknik Media Digital",
+      "Magister (S2) Universitas Gadjah Mada : Teknologi Informasi"
+    ],
+    "bidang_spesialis": "Software Development Specialist"
+  },
+  {
+    "nama": "Nelmiawati, B.CS., M.Comp.Sc",
+    "jabatan": "Dosen",
+    "nidn_nik": "115148",
+    "pendidikan_terakhir": "Magister Strata 2 (S2)",
+    "email": "mia@polibatam.ac.id",
+    "foto": "images/tim_prodi/MI.jpeg",
+    "riwayat_pendidikan": [
+      "Sarjana (S1) Universiti Teknologi Malaysia : Computer Network and Security",
+      "Magister (S2) Universiti Teknologi Malaysia : Information Security"
+    ],
+    "bidang_spesialis": "Cryptography"
+  },
+  {
+    "nama": "Dodi Prima Resda, S.Pd., M.Kom",
+    "jabatan": "Dosen",
+    "nidn_nik": "119222",
+    "pendidikan_terakhir": "Magister Strata 2 (S2)",
+    "email": "dodi.prima@polibatam.ac.id",
+    "foto": "images/tim_prodi/DP.jpeg",
+    "riwayat_pendidikan": [
+      "Sarjana (S1) Universitas Negeri Padang : Pendidikan Teknik Elektro",
+      "Magister (S2) Universitas Pendidikan Indonesia : Teknik Informatika"
+    ],
+    "bidang_spesialis": "Teknik Informatika, Rekayasa Keamanan Siber"
+  },
+  {
+    "nama": "Antoni Haikal, S.S.T., MT",
+    "jabatan": "Dosen",
+    "nidn_nik": "122276",
+    "pendidikan_terakhir": "Magister Strata 2 (S2)",
+    "email": "antoni@polibatam.ac.id",
+    "foto": "images/tim_prodi/nofoto.webp",
+    "riwayat_pendidikan": [
+      "Magister Strata 2 (S2) Institut Teknologi Bandung : Rekayasa Manajemen dan Keamanan Informasi (Cyber Security)"
+    ],
+    "bidang_spesialis": "Penetration Testing, Application Security, Network Security and Software Development"
+  },
+  {
+    "nama": "Muhammad Idris, S.Tr., M.Tr.Kom",
+    "jabatan": "Dosen",
+    "nidn_nik": "8988670023",
+    "pendidikan_terakhir": "Magister Strata 2 (S2)",
+    "email": "idris@polibatam.ac.id",
+    "foto": "images/tim_prodi/id.jpeg",
+    "riwayat_pendidikan": [
+      "Ahli Madya (DIII) Politeknik Negeri Batam: Teknik Informatika",
+      "Sarjana Terapan (DIV) Politeknik Negeri Batam : Multimedia & Jaringan",
+      "Magister Strata 2 (S2) Politeknik Elektronika Negeri Surabaya : Teknik Informatika dan Komputer"
+    ],
+    "bidang_spesialis": "Software Development, QA Software, Web Security"
+  },
+  {
+    "nama": "Festy Winda Sari, M.Sc",
+    "jabatan": "Dosen",
+    "nidn_nik": "122288",
+    "pendidikan_terakhir": "Magister Strata 2 (S2)",
+    "email": "festy@polibatam.ac.id",
+    "foto": "images/tim_prodi/fw.jpg",
+    "riwayat_pendidikan": [
+      "Ahli Madya (DIII) Politeknik Negeri Batam: Teknik Informatika",
+      "Sarjana Terapan (DIV) Politeknik Negeri Batam : Multimedia & Jaringan",
+      "Master of Cyber Security at Swansea University"
+    ],
+    "bidang_spesialis": "Cryptography, IT Sec Law & Regulation"
+  },
+  {
+    "nama": "Hajrul Khaira, S.Tr.Kom",
+    "jabatan": "Laboran",
+    "nidn_nik": "220315",
+    "pendidikan_terakhir": "Sarjana Terapan (DIV)",
+    "email": "hajrul@polibatam.ac.id",
+    "foto": "images/tim_prodi/HK.jpg",
+    "riwayat_pendidikan": [
+      "Sarjana Terapan (DIV) Politeknik Negeri Batam : Multimedia & Jaringan"
+    ],
+    "bidang_spesialis": "Software Development"
+  },
+  {
+    "nama": "Agus Riady, A.Md.Kom",
+    "jabatan": "Laboran",
+    "nidn_nik": "224345",
+    "pendidikan_terakhir": "Diploma 3 (DIII)",
+    "email": "agusriady@polibatam.ac.id",
+    "foto": "images/tim_prodi/ay.jpg",
+    "riwayat_pendidikan": [
+      "Ahli Madya (DIII) Politeknik Negeri Batam : Teknik Informatika"
+    ],
+    "bidang_spesialis": "Pengembangan Web"
+  }
+]

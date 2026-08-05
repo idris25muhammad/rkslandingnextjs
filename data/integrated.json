@@ -1,0 +1,134 @@
+{
+  "legend": [
+    { "key": "all", "label": "All Skills" },
+    { "key": "pd", "label": "Product Development", "color": "#104baa" },
+    { "key": "wc", "label": "Written Communication", "color": "#7c3aed" },
+    { "key": "st", "label": "System Thinking", "color": "#b07f06" },
+    { "key": "tw", "label": "Team Work", "color": "#348800" },
+    { "key": "ce", "label": "Communication in English", "color": "#0d9488" },
+    { "key": "ps", "label": "Professional Skills", "color": "#ea580c" }
+  ],
+  "rows": [
+    {
+      "year": "YEAR 4",
+      "yearSub": "CDIO skills are proficient",
+      "project": "Project Capstone",
+      "projectSpan": 2,
+      "yearSpan": 2,
+      "semesters": [
+        {
+          "semester": "Semester 8",
+          "courses": [
+            { "name": "Final Project", "skill": "tw" },
+            { "name": "English for Workspace Communication", "skill": "ce" },
+            { "name": "Internship Report", "skill": "wc" }
+          ]
+        },
+        {
+          "semester": "Semester 7",
+          "courses": [
+            { "name": "Industrial Internship", "skill": "ps" },
+            { "name": "Scientific Writing", "skill": "wc" },
+            { "name": "Final Project Proposal", "skill": "wc" }
+          ]
+        }
+      ]
+    },
+    {
+      "year": "YEAR 3",
+      "yearSub": "CDIO skills are strengthened",
+      "project": "Project Keystone",
+      "projectSpan": 2,
+      "yearSpan": 2,
+      "semesters": [
+        {
+          "semester": "Semester 6",
+          "courses": [
+            { "name": "Cyber Security Project", "skill": "tw" },
+            { "name": "IoT Security", "skill": "pd" },
+            { "name": "Statistic and Probability", "skill": "st" },
+            { "name": "Cyber Security Law and Ethics", "skill": "ps" },
+            { "name": "Research Methodology", "skill": "wc" },
+            { "name": "Cyber Security Policy and Audit", "skill": "st" },
+            { "name": "AI for Cybersecurity", "skill": "pd" }
+          ]
+        },
+        {
+          "semester": "Semester 5",
+          "courses": [
+            { "name": "Ethical Hacking", "skill": "pd" },
+            { "name": "Mobile Security", "skill": "pd" },
+            { "name": "Cloud Computing Security", "skill": "pd" },
+            { "name": "Digital Forensic", "skill": "pd" },
+            { "name": "Business Continuity Management", "skill": "st" },
+            { "name": "English Communication", "skill": "ce" },
+            { "name": "Entrepreneurship", "skill": "ps" }
+          ]
+        }
+      ]
+    },
+    {
+      "year": "YEAR 2",
+      "yearSub": "CDIO skills are reinforced",
+      "project": "Project Cornerstone",
+      "projectSpan": 4,
+      "yearSpan": 1,
+      "semesters": [
+        {
+          "semester": "Semester 4",
+          "courses": [
+            { "name": "Web Application Pentest", "skill": "pd" },
+            { "name": "Database Security", "skill": "pd" },
+            { "name": "DevSecOps", "skill": "pd" },
+            { "name": "Threat Intelligence Essential", "skill": "pd" },
+            { "name": "Cyber Security Risk and Management", "skill": "st" },
+            { "name": "General English", "skill": "ce" }
+          ]
+        }
+      ]
+    },
+    {
+      "year": "YEAR 1.5",
+      "yearSub": "CDIO skills are introduced",
+      "project": null,
+      "projectSpan": 1,
+      "yearSpan": 3,
+      "semesters": [
+        {
+          "semester": "Semester 3",
+          "courses": [
+            { "name": "SOC Essential", "skill": "pd" },
+            { "name": "Internetworking", "skill": "pd" },
+            { "name": "Network Defender Essentials", "skill": "pd" },
+            { "name": "Web Fundamental", "skill": "pd" },
+            { "name": "DevOps", "skill": "pd" },
+            { "name": "Bahasa Indonesia", "skill": "st" },
+            { "name": "Religious Education", "skill": "ps" }
+          ]
+        },
+        {
+          "semester": "Semester 2",
+          "courses": [
+            { "name": "Computer System Administration", "skill": "pd" },
+            { "name": "Computer Network", "skill": "pd" },
+            { "name": "Windows Fundamental", "skill": "pd" },
+            { "name": "Calculus", "skill": "st" },
+            { "name": "Applied Cryptography", "skill": "pd" },
+            { "name": "Civic Education", "skill": "ps" }
+          ]
+        },
+        {
+          "semester": "Semester 1",
+          "courses": [
+            { "name": "Fundamental of Cyber Security", "skill": "st" },
+            { "name": "Programming and Algorithm", "skill": "pd" },
+            { "name": "Linux Fundamental", "skill": "pd" },
+            { "name": "Fundamental of Physics", "skill": "st" },
+            { "name": "Discrete Mathematics", "skill": "st" },
+            { "name": "Pancasila Education", "skill": "ps" }
+          ]
+        }
+      ]
+    }
+  ]
+}
