@@ -13,7 +13,7 @@ import PmbSection from '@/components/home/PmbSection';
 import MobileBottomNav from '@/components/home/MobileBottomNav';
 
 export const metadata: Metadata = {
-  title: 'DIV Rekayasa Keamanan Siber | Politeknik Negeri Batam',
+  title: 'D4 Rekayasa Keamanan Siber | Politeknik Negeri Batam',
   description:
     'Program Studi Sarjana Terapan (D4) Rekayasa Keamanan Siber Polibatam. Mendidik spesialis keamanan siber, SOC analyst, dan pen-tester berstandar internasional dengan Akreditasi Perdana BAIK SEKALI dari LAM INFOKOM.',
   alternates: {
@@ -24,6 +24,17 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'D4 Rekayasa Keamanan Siber - Politeknik Negeri Batam',
+            url: 'https://rks.polibatam.ac.id',
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

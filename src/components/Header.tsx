@@ -71,8 +71,8 @@ export default function Header() {
                         </a>
                       </li>
                       <li>
-                        <a href={homeAnchor('komitmen')}>
-                          <span className="icon-dot"></span> <span>{t.mmVisi}</span>
+                        <a href={homeAnchor('keunggulan')}>
+                          <span className="icon-dot"></span> <span>{t.mmKeunggulan}</span>
                         </a>
                       </li>
                       <li>
@@ -85,13 +85,6 @@ export default function Header() {
                           <span className="icon-dot"></span> <span>{t.mmDosen}</span>
                         </a>
                       </li>
-                      {isSubpage && (
-                        <li>
-                          <a href={homeAnchor('komitmen')}>
-                            <span className="icon-dot"></span> <span>{t.mmVideo}</span>
-                          </a>
-                        </li>
-                      )}
                     </ul>
                   </div>
                   <div className="megamenu__col">
@@ -156,31 +149,23 @@ export default function Header() {
               <div className="megamenu">
                 <div className="megamenu__inner">
                   <div className="megamenu__col">
-                    <h4 className="megamenu__heading">
-                      {isSubpage ? 'Struktur Kurikulum' : t.mmCplHead}
-                    </h4>
+                    <h4 className="megamenu__heading">{t.mmCplHead}</h4>
                     <ul className="megamenu__links">
                       <li>
-                        <Link href="/kurikulum">
-                          <span className="icon-dot"></span>{' '}
-                          <span>{isSubpage ? 'Matriks 8 Semester' : 'Kurikulum 8 Semester'}</span>
-                        </Link>
+                        <a href="/kurikulum/">
+                          <span className="icon-dot"></span> <span>{t.mmKurikulumPage}</span>
+                        </a>
                       </li>
-                      {isSubpage && (
-                        <>
-                          <li>
-                            <Link href="/integrated-curr">
-                              <span className="icon-dot"></span>{' '}
-                              <span>Kurikulum Terintegrasi Mapping</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/prasyarat-linkmap">
-                              <span className="icon-dot"></span> <span>Prasyarat Mata Kuliah</span>
-                            </Link>
-                          </li>
-                        </>
-                      )}
+                      <li>
+                        <a href="/integrated-curr/">
+                          <span className="icon-dot"></span> <span>{t.mmIntegrated}</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/prasyarat-linkmap/">
+                          <span className="icon-dot"></span> <span>{t.mmPrasyarat}</span>
+                        </a>
+                      </li>
                       <li>
                         <a href={homeAnchor('kompetensi')}>
                           <span className="icon-dot"></span> <span>{t.mmKompetensi}</span>
@@ -194,11 +179,11 @@ export default function Header() {
                     </ul>
                   </div>
                   <div className="megamenu__col">
-                    <h4 className="megamenu__heading">Fasilitas & Karir</h4>
+                    <h4 className="megamenu__heading">{t.mmFasilitasKarir}</h4>
                     <ul className="megamenu__links">
                       <li>
                         <a href={homeAnchor('fasilitas')}>
-                          <span className="icon-dot"></span> <span>Lab SOC 24/7 Monitoring</span>
+                          <span className="icon-dot"></span> <span>{t.mmLabSoc}</span>
                         </a>
                       </li>
                       <li>
@@ -225,9 +210,7 @@ export default function Header() {
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <span className="search-btn-text">
-              {isSubpage ? t.searchKurikulum : t.searchHome}
-            </span>
+            <span className="search-btn-text">{t.searchHome}</span>
             <kbd className="search-shortcut">Ctrl+K</kbd>
           </button>
 

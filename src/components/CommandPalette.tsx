@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useLang } from './Providers';
 import { useUi } from './ui-context';
-import { generalInfo } from '@/lib/data';
+import { dosen, generalInfo, getSemestersList } from '@/lib/data';
 
 interface CommandItem {
   title: string;
@@ -12,7 +12,7 @@ interface CommandItem {
 }
 
 const STATIC_ITEMS: CommandItem[] = [
-  { title: 'Video Profil Program Studi RKS', cat: 'Video', url: '#video-profil' },
+  { title: 'Video Profil Program Studi RKS', cat: 'Video', url: '#profil' },
   { title: 'Profil & Visi Misi RKS', cat: 'Prodi', url: '#profil' },
   { title: 'PEO (Program Educational Objectives)', cat: 'Tujuan', url: '#peo' },
   { title: 'Kompetensi Utama Lulusan', cat: 'Kurikulum', url: '#kompetensi' },
@@ -67,7 +67,19 @@ export default function CommandPalette() {
     let list = [...STATIC_ITEMS, ...careerItems];
     const q = query.toLowerCase().trim();
     if (q) {
-      list = list.filter(
+      const dosenItems: CommandItem[] = dosen.map((d) => ({
+        title: `${d.nama} — ${d.bidang_spesialis}`,
+        cat: 'Dosen',
+        url: '#dosen',
+      }));
+      const courseItems: CommandItem[] = getSemestersList().flatMap((sem) =>
+        sem.courses.map((c) => ({
+          title: `${c.code} · ${c.name_id}`,
+          cat: 'Matakuliah',
+          url: `/kurikulum?search=${encodeURIComponent(c.code)}#semester-${sem.semester}`,
+        }))
+      );
+      list = [...list, ...dosenItems, ...courseItems].filter(
         (i) => i.title.toLowerCase().includes(q) || i.cat.toLowerCase().includes(q)
       );
     }

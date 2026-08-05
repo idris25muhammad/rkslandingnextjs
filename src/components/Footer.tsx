@@ -34,7 +34,7 @@ export default function Footer() {
         : [
             { label: t.flProfil, href: homeAnchor('profil') },
             { label: 'Kurikulum 8 Semester', href: '/kurikulum' },
-            { label: 'Kurikulum Terintegrasi Mapping', href: '/integrated-curr' },
+            { label: 'Kurikulum Terintegrasi', href: '/integrated-curr' },
             { label: 'Prasyarat Mata Kuliah', href: '/prasyarat-linkmap' },
           ];
 

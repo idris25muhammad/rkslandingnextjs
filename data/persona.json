@@ -22,7 +22,7 @@
       "desc": "Bekerja sama dengan RKS Polibatam untuk rekrutmen talenta Cyber Security, program magang industri 1-2 semester, proyek riset terapan CSIRT, dan konsultasi keamanan siber.",
       "links": [
         { "label": "Profil PEO Lulusan", "url": "#peo" },
-        { "label": "Standar Akreditasi IABEE", "url": "#akreditasi" },
+        { "label": "Standar Akreditasi IABEE", "url": "#sertifikasi" },
         { "label": "Kontak Kerjasama Industri", "url": "#pmb" }
       ]
     },
@@ -67,7 +67,7 @@
       "desc": "Partner with RKS Polibatam for Cybersecurity talent recruitment, 1-2 semester full-time internships, applied CSIRT research projects, and security consulting.",
       "links": [
         { "label": "PEO Professional Profile", "url": "#peo" },
-        { "label": "IABEE Accreditation Criteria", "url": "#akreditasi" },
+        { "label": "IABEE Accreditation Criteria", "url": "#sertifikasi" },
         { "label": "Industry Partnership Contact", "url": "#pmb" }
       ]
     },
@@ -76,7 +76,7 @@
       "desc": "D4 RKS is accredited Excellent by LAM INFOKOM and IABEE standards, assuring top-tier employment prospects in banking, government, and global SOCs.",
       "links": [
         { "label": "Why Choose RKS Polibatam?", "url": "#profil" },
-        { "label": "Download Accreditation PDF", "url": "dokumen/akreditasi_iabee.pdf" }
+        { "label": "Accreditation & Certification", "url": "#sertifikasi" }
       ]
     },
     "alumni": {

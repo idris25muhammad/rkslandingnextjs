@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useLang } from '@/components/Providers';
 import CertTrigger from '@/components/CertTrigger';
 
@@ -7,7 +8,7 @@ export default function UspsSection() {
   const { t } = useLang();
 
   return (
-    <section className="usp-gallery-section" id="profil">
+    <section className="usp-gallery-section" id="keunggulan">
       <div className="container">
         <div className="section-header center-header">
           <span className="section-tag">{t.uspTag}</span>
@@ -23,7 +24,6 @@ export default function UspsSection() {
             ></div>
             <div className="bento-card__overlay"></div>
             <div className="bento-card__content">
-              <span className="bento-badge">{t.tile1Badge}</span>
               <h3 className="bento-title">{t.tile1Title}</h3>
               <p className="bento-desc">{t.tile1Desc}</p>
               <a href="#fasilitas" className="bento-link">
@@ -39,6 +39,12 @@ export default function UspsSection() {
               </div>
               <h4 className="stat-title">{t.tile2Title}</h4>
               <p className="stat-desc">{t.tile2Desc}</p>
+              <Link href="/kurikulum" className="bento-btn">
+                <span>{t.heroBtn2}</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </Link>
             </div>
           </div>
 
@@ -100,6 +106,28 @@ export default function UspsSection() {
             </div>
           </div>
         </div>
+
+        <a
+          href="https://www.polibatam.ac.id/prodi-rekayasa-keamanan-siber-polibatam-gelar-kuliah-umum-tentang-android-malware-analysis/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="kuliah-banner"
+        >
+          <div className="kuliah-banner__poster">
+            <img src="/images/rks-kuliah-umum.jpg" alt={t.kuliahTitle} loading="lazy" />
+          </div>
+          <div className="kuliah-banner__text">
+            <span className="kuliah-banner__tag">{t.kuliahTag}</span>
+            <h3 className="kuliah-banner__title">{t.kuliahTitle}</h3>
+            <p className="kuliah-banner__desc">{t.kuliahDesc}</p>
+            <span className="kuliah-banner__cta">
+              {t.kuliahCta}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </span>
+          </div>
+        </a>
       </div>
     </section>
   );

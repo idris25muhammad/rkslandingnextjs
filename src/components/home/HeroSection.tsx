@@ -34,23 +34,6 @@ export default function HeroSection() {
               {t.heroBtn2}
             </Link>
           </div>
-
-          <div className="hero-minimal__stats">
-            <div className="stat-item">
-              <span className="stat-val">8</span>
-              <span className="stat-lbl">{t.stat1}</span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <span className="stat-val">20+</span>
-              <span className="stat-lbl">{t.stat2}</span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <span className="stat-val">100%</span>
-              <span className="stat-lbl">{t.stat3}</span>
-            </div>
-          </div>
         </div>
 
         <div className="hero-minimal__media">

@@ -41,9 +41,17 @@ export default function FasilitasSection() {
           </div>
 
           <div className="inclusivity-column">
-            <p className="inclusivity-desc">{t.fasCol2Desc}</p>
             <div className="inclusivity-video-wrapper">
-              <img src="/images/kampus-Inklusif.jpeg" alt="Fasilitas Kampus Inklusif" className="inclusivity-video" />
+              <iframe
+                src="https://www.youtube.com/embed/Y-GQEvRFoLY?rel=0"
+                title={t.fasilitasTitle}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+              />
+              <div className="inclusivity-cover">
+                <span className="inclusivity-cover__text">{t.fasColCover}</span>
+              </div>
             </div>
           </div>
         </div>

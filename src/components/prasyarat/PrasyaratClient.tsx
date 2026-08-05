@@ -89,7 +89,11 @@ export default function PrasyaratClient() {
   }, [drawLines, focusId]);
 
   useEffect(() => {
-    const onDocClick = () => setFocusId(null);
+    const onDocClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (target && target.closest('.course-box')) return;
+      setFocusId(null);
+    };
     document.addEventListener('click', onDocClick);
     return () => document.removeEventListener('click', onDocClick);
   }, []);
@@ -100,9 +104,14 @@ export default function PrasyaratClient() {
         <div className="container">
           <h1 className="kurikulum-hero__title">Peta Alur &amp; Prasyarat Mata Kuliah</h1>
 
+          <p className="kurikulum-hero__subtitle">
+            Visualisasi alur kurikulum yang terstruktur untuk membantu mahasiswa memahami tahapan
+            belajar dan hubungan prasyarat antar-mata kuliah menuju kelulusan.
+          </p>
+
           <div className="kurikulum-hero__actions">
             <a href="/kurikulum" className="btn btn--cyan btn--md">
-              <span>← Kembali ke Kartu Kurikulum</span>
+              <span>← Kembali ke Kurikulum</span>
             </a>
             <a href="/integrated-curr" className="btn btn--outline-cyan btn--md">
               <span>Lihat Kurikulum Terintegrasi ↗</span>

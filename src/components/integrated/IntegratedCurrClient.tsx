@@ -12,11 +12,16 @@ export default function IntegratedCurrClient() {
     <>
       <section className="kurikulum-hero">
         <div className="container">
-          <h1 className="kurikulum-hero__title">Kurikulum Terintegrasi Mapping</h1>
+          <h1 className="kurikulum-hero__title">Kurikulum Terintegrasi</h1>
+
+          <p className="kurikulum-hero__subtitle">
+            Pemetaan kurikulum secara menyeluruh untuk memastikan keterkaitan yang harmonis antara
+            capaian pembelajaran, mata kuliah, dan kebutuhan industri.
+          </p>
 
           <div className="kurikulum-hero__actions">
             <a href="/kurikulum" className="btn btn--cyan btn--md">
-              <span>← Kembali ke Kartu Kurikulum</span>
+              <span>← Kembali ke Kurikulum</span>
             </a>
             <a href="/prasyarat-linkmap" className="btn btn--outline-cyan btn--md">
               <span>Lihat Peta Prasyarat ↗</span>
@@ -35,7 +40,7 @@ export default function IntegratedCurrClient() {
                 <div
                   key={item.key}
                   className={`legend-item${activeSkill === item.key ? ' active' : ''}`}
-                  onClick={() => setActiveSkill(item.key)}
+                  onClick={() => setActiveSkill((prev) => (prev === item.key ? 'all' : item.key))}
                 >
                   {item.color && <div className={`dot ${item.key}`}></div>}
                   {item.label}

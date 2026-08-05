@@ -6,51 +6,28 @@ import { useLang, useTheme } from './Providers';
 import { useUi } from './ui-context';
 
 export default function MobileMenu() {
-  const { mobileOpen, setMobileOpen, setCommandOpen } = useUi();
+  const { mobileOpen, setMobileOpen } = useUi();
   const { lang, setLang, t } = useLang();
   const { toggleTheme } = useTheme();
   const pathname = usePathname();
-  const variant: 'home' | 'kurikulum' | 'simple' =
-    pathname === '/' ? 'home' : pathname === '/kurikulum' ? 'kurikulum' : 'simple';
+  const isHome = pathname === '/';
 
   if (!mobileOpen) return null;
 
-  const homeAnchor = (hash: string) =>
-    variant === 'home' ? `#${hash}` : `/#${hash}`;
+  const homeAnchor = (hash: string) => (isHome ? `#${hash}` : `/#${hash}`);
 
   const close = () => setMobileOpen(false);
 
-  const links: { label: string; href: string; active?: boolean }[] =
-    variant === 'home'
-      ? [
-          { label: t.mobProfil, href: '#profil' },
-          { label: t.mobVisi, href: '#komitmen' },
-          { label: t.mobPeo, href: '#peo' },
-          { label: t.mobKompetensi, href: '#kompetensi' },
-          { label: t.mobKarir, href: '#karir' },
-          { label: t.mobSertifikasi, href: '#sertifikasi' },
-          { label: t.mobVideo, href: '#komitmen' },
-          { label: t.mobFasilitas, href: '#fasilitas' },
-          { label: t.mobDosen, href: '#dosen' },
-        ]
-      : variant === 'kurikulum'
-        ? [
-            { label: 'Beranda Utama', href: '/' },
-            { label: 'Profil & Akademik', href: '/#profil' },
-            { label: 'Kurikulum 8 Semester', href: '/kurikulum', active: true },
-            { label: 'Sertifikasi Global', href: '/#sertifikasi' },
-            { label: 'Peluang Karir', href: '/#karir' },
-          ]
-        : [
-            { label: 'Beranda', href: '/' },
-            { label: 'Kurikulum 8 Semester', href: '/kurikulum' },
-            {
-              label: 'Kurikulum Terintegrasi Mapping',
-              href: '/integrated-curr',
-              active: variant === 'simple' && false,
-            },
-            { label: 'Prasyarat Mata Kuliah', href: '/prasyarat-linkmap' },
-          ];
+  const links: { label: string; href: string }[] = [
+    { label: t.mobProfil, href: '#profil' },
+    { label: t.mobPeo, href: '#peo' },
+    { label: t.mobKompetensi, href: '#kompetensi' },
+    { label: t.mobKarir, href: '#karir' },
+    { label: t.mobSertifikasi, href: '#sertifikasi' },
+    { label: t.mobVideo, href: '#profil' },
+    { label: t.mobFasilitas, href: '#fasilitas' },
+    { label: t.mobDosen, href: '#dosen' },
+  ];
 
   return (
     <div className="mobile-menu active">
@@ -113,11 +90,7 @@ export default function MobileMenu() {
           {links.map((link, idx) => (
             <li key={idx}>
               {link.href.startsWith('/') ? (
-                <Link
-                  href={link.href}
-                  className={`mobile-link${link.active ? ' active' : ''}`}
-                  onClick={close}
-                >
+                <Link href={link.href} className="mobile-link" onClick={close}>
                   {link.label}
                 </Link>
               ) : (
@@ -132,52 +105,24 @@ export default function MobileMenu() {
             </li>
           ))}
         </ul>
-        {variant === 'home' && (
-          <div className="mobile-menu__actions">
-            <a
-              href="#pmb"
-              className="btn btn--cyan btn--lg"
-              style={{ width: '100%', marginTop: 20 }}
-              onClick={close}
-            >
-              Daftar PMB ↗
-            </a>
-            <Link
-              href="/kurikulum"
-              className="btn btn--outline-cyan btn--lg"
-              style={{ width: '100%', marginTop: 10 }}
-              onClick={close}
-            >
-              {t.mobLihatKurikulum} ↗
-            </Link>
-          </div>
-        )}
-        {variant === 'kurikulum' && (
-          <div className="mobile-menu__actions">
-            <a
-              href="/#pmb"
-              className="btn btn--cyan btn--lg"
-              style={{ width: '100%', marginTop: 20 }}
-              onClick={close}
-            >
-              Pendaftaran PMB ↗
-            </a>
-          </div>
-        )}
-        {variant === 'simple' && (
-          <div className="mobile-menu__actions">
-            <button
-              className="btn btn--cyan btn--lg"
-              style={{ width: '100%', marginTop: 20 }}
-              onClick={() => {
-                close();
-                setCommandOpen(true);
-              }}
-            >
-              Cari di RKS ↗
-            </button>
-          </div>
-        )}
+        <div className="mobile-menu__actions">
+          <a
+            href={homeAnchor('pmb')}
+            className="btn btn--cyan btn--lg"
+            style={{ width: '100%', marginTop: 20 }}
+            onClick={close}
+          >
+            Daftar PMB ↗
+          </a>
+          <Link
+            href="/kurikulum"
+            className="btn btn--outline-cyan btn--lg"
+            style={{ width: '100%', marginTop: 10 }}
+            onClick={close}
+          >
+            {t.mobLihatKurikulum} ↗
+          </Link>
+        </div>
       </div>
     </div>
   );

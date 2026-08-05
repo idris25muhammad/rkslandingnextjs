@@ -86,11 +86,18 @@ export default function PersonaSection() {
   return (
     <section className="persona-section" id="persona-selector">
       <div className="container">
+        <div className="section-header">
+          <span className="section-tag">{t.personaTag}</span>
+          <h2 className="section-title">{t.personaTitle}</h2>
+          <p className="section-desc">{t.personaSub}</p>
+        </div>
+
         <div className="persona-widget">
           <div className="persona-terminal-bar" aria-hidden="true">
-            <span className="terminal-dot terminal-dot--red"></span>
-            <span className="terminal-dot terminal-dot--yellow"></span>
-            <span className="terminal-dot terminal-dot--green"></span>
+            <svg className="persona-terminal-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="M6 9l3 3-3 3M11 15h7" />
+            </svg>
             <span className="terminal-title">wise@rks-polibatam:~/curated</span>
           </div>
 
@@ -103,15 +110,6 @@ export default function PersonaSection() {
               height="50"
               loading="lazy"
             />
-          </div>
-
-          <div className="persona-widget__header">
-            <div className="persona-widget__eyebrow">
-              <TerminalPrompt />
-              <span className="terminal-cmd">./curate --persona</span>
-            </div>
-            <h3 className="persona-widget__title">{t.personaTitle}</h3>
-            <p className="persona-widget__sub">{t.personaSub}</p>
           </div>
 
           <div className="persona-cli">
@@ -169,7 +167,13 @@ export default function PersonaSection() {
                 {done && (
                   <div className="persona-cli__links">
                     {personaData.links.map((link, idx) => (
-                      <a key={idx} href={link.url} className="persona-text-link">
+                      <a
+                        key={idx}
+                        href={link.url}
+                        className="persona-text-link"
+                        target={link.url.startsWith('http') ? '_blank' : undefined}
+                        rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      >
                         → {link.label}
                       </a>
                     ))}

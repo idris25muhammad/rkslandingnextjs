@@ -51,7 +51,7 @@
 /* --------------------------------------------------------------------------
    INTEGRATED CURRICULUM MATRIX (integrated-curr page)
    -------------------------------------------------------------------------- */
-.integrated-page :root {
+.integrated-page {
   --sidebar-year: #1e293b;
   --sidebar-project: #64748b;
   --product-dev: #104baa;
@@ -109,6 +109,14 @@
   border-color: var(--cyan-bright);
   background-color: #1e293b;
   color: white;
+  box-shadow: 0 0 0 2px rgba(0, 240, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+[data-theme='dark'] .integrated-page .legend-item.active {
+  background-color: #0ea5e9;
+  border-color: #0ea5e9;
+  color: #040812;
 }
 
 .integrated-page .dot {
