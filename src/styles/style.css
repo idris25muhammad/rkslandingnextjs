@@ -2615,6 +2615,20 @@ h4 {
   .persona-cli__links {
     gap: 6px;
   }
+
+  .persona-cli__question,
+  .persona-cli__input-row,
+  .terminal-output-line {
+    flex-wrap: wrap;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+
+  .persona-cli__input {
+    min-width: 0;
+    width: auto;
+    flex: 1 1 100%;
+  }
 }
 
 /* White Section Styles for Certifications Section */
