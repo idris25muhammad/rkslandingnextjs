@@ -114,7 +114,7 @@ export default function UspsSection() {
           className="kuliah-banner"
         >
           <div className="kuliah-banner__poster">
-            <img src="/images/rks-kuliah-umum.jpg" alt={t.kuliahTitle} loading="lazy" />
+            <img src="/images/rks-kuliah-umum.webp" alt={t.kuliahTitle} loading="lazy" />
           </div>
           <div className="kuliah-banner__text">
             <span className="kuliah-banner__tag">{t.kuliahTag}</span>

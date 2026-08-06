@@ -66,7 +66,7 @@ export default function HeroSection() {
 
           <div className="hero-right-banner-card">
             <img
-              src="/images/ilustrasi_soc_biru.png"
+              src="/images/ilustrasi_soc_biru.webp"
               alt="Banner Rekayasa Keamanan Siber Polibatam"
               className="hero-right-banner-img"
               loading="eager"
