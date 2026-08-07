@@ -1,6 +1,7 @@
 'use client';
 
 import { useLang } from '@/components/Providers';
+import SectionTitle from '@/components/home/SectionTitle';
 
 const LABS = [
   { room: 'Ruang 10.3', img: '/images/fasilitas/10.3.jpg', titleKey: 'lab1Title', descKey: 'lab1Desc' },
@@ -18,24 +19,22 @@ export default function FasilitasSection() {
       <div className="container">
         <div className="section-header center-header">
           <span className="section-tag">{t.fasilitasTag}</span>
-          <h2 className="section-title">{t.fasilitasTitle}</h2>
+          <SectionTitle text={t.fasilitasTitle} variant="monitor" />
           <p className="section-desc">{t.fasilitasDesc}</p>
         </div>
 
         <div className="fasilitas-inclusivity-layout">
           <div className="fasilitas-column">
-            <div className="fasilitas-grid fasilitas-grid--scrollable">
+            <div className="fasilitas-photo-grid">
+              <span className="fasilitas-blob" aria-hidden="true"></span>
               {LABS.map((lab, idx) => (
-                <div className="fasilitas-card" key={idx}>
-                  <div className="fasilitas-card__image">
-                    <img src={lab.img} alt={`Fasilitas Lab RKS ${lab.room}`} width="400" height="220" loading="lazy" />
+                <figure className={`fasilitas-photo fasilitas-photo--${idx + 1}`} key={idx}>
+                  <img src={lab.img} alt={`Fasilitas Lab RKS ${lab.room}`} loading="lazy" />
+                  <figcaption className="fasilitas-photo__label">
                     <span className="fasilitas-room-tag">{lab.room}</span>
-                  </div>
-                  <div className="fasilitas-card__content">
-                    <h3 className="fasilitas-title">{t[lab.titleKey]}</h3>
-                    <p className="fasilitas-desc">{t[lab.descKey]}</p>
-                  </div>
-                </div>
+                    <span className="fasilitas-photo__name">{t[lab.titleKey]}</span>
+                  </figcaption>
+                </figure>
               ))}
             </div>
           </div>
@@ -49,9 +48,6 @@ export default function FasilitasSection() {
                 allowFullScreen
                 loading="lazy"
               />
-              <div className="inclusivity-cover">
-                <span className="inclusivity-cover__text">{t.fasColCover}</span>
-              </div>
             </div>
           </div>
         </div>

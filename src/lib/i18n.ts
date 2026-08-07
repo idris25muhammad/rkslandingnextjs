@@ -17,7 +17,7 @@ const id: UiDict = {
   personaTitle: 'Temukan Informasi Sesuai Profil Anda',
   personaSub: 'Pilih profil Anda untuk navigasi cepat & informasi paling relevan',
   personaQuestion: 'Silakan pilih profil Anda',
-  personaHint: 'Ketik angka 1-5, lalu tekan Enter',
+  personaHint: 'Ketik 1-5, Enter',
   personaRun: './info --show',
   tabCalon: 'Calon Mahasiswa (SMA/SMK)',
   tabMahasiswa: 'Mahasiswa & Praktisi',
@@ -25,7 +25,7 @@ const id: UiDict = {
   tabOrtua: 'Orang Tua / Wali',
   tabAlumni: 'Alumni RKS',
   uspTag: 'MENGAPA RKS POLIBATAM?',
-  uspTitle: 'Keunggulan Utama Program Studi',
+  uspTitle: 'Keunggulan Utama RKS',
   uspDesc:
     'Kombinasi kurikulum berstandar industri siber, pengajar praktisi berpengalaman, dan lab operasi keamanan 24/7.',
   tile1Title: 'Praktik Real-Time di Lab Security Operations Center (SOC)',
@@ -62,7 +62,7 @@ const id: UiDict = {
   mmFasilitasKarir: 'Fasilitas & Karir',
   mmLabSoc: 'Lab SOC 24/7 Monitoring',
   mmKompetensi: 'Kompetensi Utama (CPL)',
-  mmSertifikasi: '20+ Sertifikasi Global',
+  mmSertifikasi: 'Sertifikasi Global',
   mmKarir: 'Prospek Karir Lulusan',
   vmtEyebrow: 'KOMITMEN & STRATEGI',
   vmtCardTitle: 'Visi, Misi, Tujuan & Sasaran',
@@ -108,7 +108,7 @@ const id: UiDict = {
   karirDesc:
     'Profil lulusan yang paling dicari oleh perusahaan multinasional, perbankan, instansi pemerintah, dan SOC global.',
   certTag: 'KUALIFIKASI GLOBAL',
-  certTitle: 'Mitra Akademi & 20+ Sertifikasi Internasional',
+  certTitle: 'Mitra Akademi & Sertifikasi Internasional',
   certDesc:
     'Kurikulum dirancang untuk mempersiapkan mahasiswa menghadapi ujian sertifikasi profesi global yang diakui industri nasional & internasional.',
   certMitra: 'Mitra Akademi Resmi:',
@@ -156,7 +156,7 @@ const id: UiDict = {
   mobPeo: 'PEO & Profil Mandiri',
   mobKompetensi: 'Kompetensi & CPL',
   mobKarir: 'Peluang Kerja Lulusan',
-  mobSertifikasi: '20+ Sertifikasi Internasional',
+  mobSertifikasi: 'Sertifikasi Internasional',
   mobVideo: 'Video Profil RKS',
   mobFasilitas: 'Fasilitas Laboratorium',
   mobDosen: 'Tim Dosen Pengajar',
@@ -228,12 +228,10 @@ const id: UiDict = {
   dashT6s: '10 CPL Lulusan terukur',
   vmtDesc:
     'Dari visi yang menginspirasi hingga sasaran yang terukur, peta jalan kami dalam mencetak profesional keamanan siber berstandar global.',
-  vmtHint: 'Klik setiap tahap untuk menjelajah',
   kuliahTag: 'KOLABORASI INDUSTRI · KULIAH UMUM',
   kuliahTitle: 'Kuliah Umum Bersama Praktisi Industri Keamanan Siber',
   kuliahDesc:
     'Prodi RKS melaksanakan kuliah umum dengan menghadirkan praktisi industri keamanan siber, membekali mahasiswa dengan wawasan dan tren terbaru langsung dari lapangan.',
-  kuliahCta: 'Lihat kegiatan di polibatam.ac.id',
 };
 
 const en: UiDict = {
@@ -251,7 +249,7 @@ const en: UiDict = {
   personaTitle: 'Find Information for Your Profile',
   personaSub: 'Select your profile for tailored navigation & key insights',
   personaQuestion: 'Please select your profile',
-  personaHint: 'Type a number 1-5, then press Enter',
+  personaHint: 'Type 1-5, Enter',
   personaRun: './info --show',
   tabCalon: 'Prospective Students',
   tabMahasiswa: 'Students & Practitioners',
@@ -297,7 +295,7 @@ const en: UiDict = {
   mmFasilitasKarir: 'Facilities & Careers',
   mmLabSoc: 'SOC 24/7 Monitoring Lab',
   mmKompetensi: 'Core Competencies (CPL)',
-  mmSertifikasi: '20+ Global Certifications',
+  mmSertifikasi: 'Global Certifications',
   mmKarir: 'Graduate Career Prospects',
   vmtEyebrow: 'COMMITMENT & STRATEGY',
   vmtCardTitle: 'Vision, Mission, Objectives & Targets',
@@ -344,7 +342,7 @@ const en: UiDict = {
   karirDesc:
     'Graduate profiles highly sought after by multinational tech companies, banking, government, and global SOCs.',
   certTag: 'GLOBAL QUALIFICATIONS',
-  certTitle: 'Academic Partners & 20+ Global Certifications',
+  certTitle: 'Academic Partners & Global Certifications',
   certDesc:
     'Our curriculum is designed to prepare students for globally recognized professional certification exams required by the industry.',
   certMitra: 'Official Academic Partners:',
@@ -392,7 +390,7 @@ const en: UiDict = {
   mobPeo: 'PEO & Autonomous Profile',
   mobKompetensi: 'Competencies & CPL',
   mobKarir: 'Graduate Career Opportunities',
-  mobSertifikasi: '20+ International Certifications',
+  mobSertifikasi: 'International Certifications',
   mobVideo: 'RKS Profile Video',
   mobFasilitas: 'Laboratory Facilities',
   mobDosen: 'Faculty Members',
@@ -464,12 +462,10 @@ const en: UiDict = {
   dashT6s: '10 measurable graduate CPL',
   vmtDesc:
     'From an inspiring vision to measurable targets, our roadmap for producing world-class cyber security professionals.',
-  vmtHint: 'Click each stage to explore',
   kuliahTag: 'INDUSTRY COLLABORATION · PUBLIC LECTURE',
   kuliahTitle: 'Public Lectures with Cyber Security Industry Practitioners',
   kuliahDesc:
     'RKS hosts public lectures featuring cyber security industry practitioners, giving students the latest insights and trends straight from the field.',
-  kuliahCta: 'See activities at polibatam.ac.id',
 };
 
 export const dictionaries: Record<Lang, UiDict> = { id, en };

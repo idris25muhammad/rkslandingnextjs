@@ -18,7 +18,7 @@ const STATIC_ITEMS: CommandItem[] = [
   { title: 'Kompetensi Utama Lulusan', cat: 'Kurikulum', url: '#kompetensi' },
   { title: 'Capaian Pembelajaran (CPL)', cat: 'Kurikulum', url: '#cpl-list' },
   { title: 'Posisi Spesialis Keamanan Siber', cat: 'Karir', url: '#karir' },
-  { title: '20+ Sertifikasi Internasional (CEH, Cisco)', cat: 'Sertifikasi', url: '#sertifikasi' },
+  { title: 'Sertifikasi Internasional (CEH, Cisco)', cat: 'Sertifikasi', url: '#sertifikasi' },
   { title: 'Fasilitas Laboratorium SOC', cat: 'Fasilitas', url: '#fasilitas' },
   { title: 'Tim Dosen & Pengajar RKS', cat: 'Dosen', url: '#dosen' },
   { title: 'Pendaftaran PMB Polibatam', cat: 'PMB', url: '#pmb' },

@@ -2,6 +2,7 @@
 
 import { useLang } from '@/components/Providers';
 import { generalInfo } from '@/lib/data';
+import SectionTitle from '@/components/home/SectionTitle';
 
 const PEO_NUMBERS = ['01', '02', '03'];
 const PEO_NAMES = ['Problem Solver', 'Lifelong Learner', 'Cyber Innovator'];
@@ -16,8 +17,8 @@ export default function PeoSection() {
         <div className="peo-container-box">
           <div className="peo-header">
             <span className="section-tag">{t.peoTag}</span>
-            <h2 className="peo-main-title">{t.peoTitle}</h2>
-            <p className="peo-sub-desc">{peo.deskripsi}</p>
+            <SectionTitle text={t.peoTitle} variant="attackDefense" />
+            <p className="section-sub-desc">{peo.deskripsi}</p>
           </div>
 
           <div className="peo-cards-grid">

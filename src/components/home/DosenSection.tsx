@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useLang } from '@/components/Providers';
 import { dosen } from '@/lib/data';
+import SectionTitle from '@/components/home/SectionTitle';
 
 function DosenAvatar({ src, name }: { src: string; name: string }) {
   const [imgSrc, setImgSrc] = useState(src);
@@ -27,7 +28,7 @@ export default function DosenSection() {
       <div className="container">
         <div className="section-header">
           <span className="section-tag">{t.dosenTag}</span>
-          <h2 className="section-title">{t.dosenTitle}</h2>
+          <SectionTitle text={t.dosenTitle} variant="nodes" />
           <p className="section-desc">{t.dosenDesc}</p>
         </div>
 

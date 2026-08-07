@@ -2,6 +2,7 @@
 
 import { useLang } from '@/components/Providers';
 import { certifications } from '@/lib/data';
+import SectionTitle from '@/components/home/SectionTitle';
 
 const ACADEMIES = [
   { img: '/images/akademi/cisco.png', alt: 'Cisco Networking Academy' },
@@ -19,7 +20,7 @@ export default function SertifikasiSection() {
       <div className="container">
         <div className="section-header">
           <span className="section-tag">{t.certTag}</span>
-          <h2 className="section-title">{t.certTitle}</h2>
+          <SectionTitle text={t.certTitle} variant="radar" />
           <p className="section-desc">{t.certDesc}</p>
         </div>
 

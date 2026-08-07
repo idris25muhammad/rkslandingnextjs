@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLang } from '@/components/Providers';
 import { personas } from '@/lib/data';
+import SectionTitle from '@/components/home/SectionTitle';
 
 const PERSONAS = [
   { key: 'calon-mahasiswa', id: 'tabCalon' },
@@ -64,10 +65,13 @@ export default function PersonaSection() {
     const num = parseInt(value, 10);
     if (num >= 1 && num <= PERSONAS.length) {
       setActive(PERSONAS[num - 1].key);
-      setTyped('');
-    } else {
-      setTyped('');
     }
+    setTyped('');
+  };
+
+  const handleSelect = (num: number) => {
+    setTyped(String(num));
+    setActive(PERSONAS[num - 1].key);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -88,7 +92,7 @@ export default function PersonaSection() {
       <div className="container">
         <div className="section-header">
           <span className="section-tag">{t.personaTag}</span>
-          <h2 className="section-title">{t.personaTitle}</h2>
+          <SectionTitle text={t.personaTitle} variant="monitor" />
           <p className="section-desc">{t.personaSub}</p>
         </div>
 
@@ -120,14 +124,17 @@ export default function PersonaSection() {
 
             <div className="persona-cli__options">
               {PERSONAS.map((p, idx) => (
-                <div
+                <button
                   key={p.key}
+                  type="button"
                   className={`persona-option-line${active === p.key ? ' active' : ''}`}
+                  onClick={() => handleSelect(idx + 1)}
+                  aria-pressed={active === p.key}
                 >
                   <span className="persona-option-line__num">[{idx + 1}]</span>
                   <span className="persona-option-line__text">{t[p.id]}</span>
                   {active === p.key && <span className="persona-option-line__mark">&lt;-- selected</span>}
-                </div>
+                </button>
               ))}
             </div>
 

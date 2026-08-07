@@ -270,10 +270,6 @@ export default function Header() {
             </button>
           </div>
 
-          <a href={isSubpage ? `${homePage}#pmb` : '#pmb'} className="btn btn--cyan btn--sm">
-            {t.btnPmb}
-          </a>
-
           <button
             className={`mobile-toggle${mobileOpen ? ' is-open' : ''}`}
             onClick={() => setMobileOpen(!mobileOpen)}

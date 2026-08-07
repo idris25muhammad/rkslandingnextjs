@@ -10,6 +10,7 @@ import SertifikasiSection from '@/components/home/SertifikasiSection';
 import FasilitasSection from '@/components/home/FasilitasSection';
 import DosenSection from '@/components/home/DosenSection';
 import PmbSection from '@/components/home/PmbSection';
+import SocialSection from '@/components/home/SocialSection';
 import MobileBottomNav from '@/components/home/MobileBottomNav';
 
 export const metadata: Metadata = {
@@ -75,6 +76,7 @@ export default function HomePage() {
       <FasilitasSection />
       <DosenSection />
       <PmbSection />
+      <SocialSection />
       <MobileBottomNav />
     </>
   );

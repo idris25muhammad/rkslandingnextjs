@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLang } from '@/components/Providers';
 import CertTrigger from '@/components/CertTrigger';
+import SectionTitle from '@/components/home/SectionTitle';
 
 export default function UspsSection() {
   const { t } = useLang();
@@ -12,7 +13,7 @@ export default function UspsSection() {
       <div className="container">
         <div className="section-header center-header">
           <span className="section-tag">{t.uspTag}</span>
-          <h2 className="section-title">{t.uspTitle}</h2>
+          <SectionTitle text={t.uspTitle} variant="nodes" />
           <p className="section-desc">{t.uspDesc}</p>
         </div>
 
@@ -120,12 +121,6 @@ export default function UspsSection() {
             <span className="kuliah-banner__tag">{t.kuliahTag}</span>
             <h3 className="kuliah-banner__title">{t.kuliahTitle}</h3>
             <p className="kuliah-banner__desc">{t.kuliahDesc}</p>
-            <span className="kuliah-banner__cta">
-              {t.kuliahCta}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </span>
           </div>
         </a>
       </div>
