@@ -14,10 +14,9 @@ export default function SectionTitle({
 
   return (
     <h2 className="section-title">
-      {head}
-      <span className="title-doodle">
+      {text}
+      <span className="title-doodle" aria-hidden="true">
         <SocDoodle variant={variant} className="title-doodle__icon" />
-        <span className="title-doodle__text">{tail}</span>
       </span>
     </h2>
   );

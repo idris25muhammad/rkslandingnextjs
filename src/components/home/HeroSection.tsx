@@ -10,15 +10,21 @@ export default function HeroSection() {
   const data = generalInfo[lang];
 
   return (
-    <section className="hero-minimal" id="hero">
-      <div className="hero-aurora-bg" aria-hidden="true">
-        <div className="hero-aurora-blob hero-aurora-blob--cyan"></div>
-        <div className="hero-aurora-blob hero-aurora-blob--blue"></div>
-        <div className="hero-aurora-blob hero-aurora-blob--purple"></div>
-        <div className="hero-aurora-grid"></div>
-      </div>
+    <section className="hero-video" id="hero">
+      <img
+        className="hero-video__media"
+        src="/images/bg-socroom.webp"
+        alt=""
+        aria-hidden="true"
+        width="1884"
+        height="835"
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
+      />
+      <div className="hero-video__overlay" aria-hidden="true"></div>
 
-      <div className="container hero-minimal__container">
+      <div className="container hero-minimal__container hero-video__container">
         <div className="hero-minimal__text">
           <h1
             className="hero-minimal__title"
@@ -33,46 +39,6 @@ export default function HeroSection() {
             <Link href="/kurikulum" className="btn btn--outline-cyan btn--lg">
               {t.heroBtn2}
             </Link>
-          </div>
-        </div>
-
-        <div className="hero-minimal__media">
-          <div className="hero-accreditation-block">
-            <div className="hero-acc-logos">
-              <CertTrigger
-                className="hero-acc-btn cert-popup-trigger"
-                certImg="/dokumen/sertifikat_iabee.jpg"
-                certTitle="Sertifikat Akreditasi IABEE - Standard Accreditation"
-                title="Klik untuk lihat Sertifikat IABEE (JPG)"
-              >
-                <img src="/images/logo/iabee.png" alt="Akreditasi IABEE" height="40" loading="lazy" />
-              </CertTrigger>
-              <CertTrigger
-                className="hero-acc-btn cert-popup-trigger"
-                certImg="/dokumen/sertifikat_laminfokom.jpg"
-                certTitle="Sertifikat Akreditasi LAM INFOKOM - Predikat BAIK SEKALI (Akreditasi Perdana)"
-                title="Klik untuk lihat Sertifikat LAM INFOKOM (Baik Sekali)"
-              >
-                <img
-                  src="/images/logo/laminfokom.png"
-                  alt="Akreditasi LAM INFOKOM Baik Sekali"
-                  height="40"
-                  loading="lazy"
-                />
-                <span className="hero-acc-badge-tag">BAIK SEKALI</span>
-              </CertTrigger>
-            </div>
-          </div>
-
-          <div className="hero-right-banner-card">
-            <img
-              src="/images/ilustrasi_soc_biru.webp"
-              alt="Banner Rekayasa Keamanan Siber Polibatam"
-              className="hero-right-banner-img"
-              loading="eager"
-              width="720"
-              height="400"
-            />
           </div>
         </div>
       </div>

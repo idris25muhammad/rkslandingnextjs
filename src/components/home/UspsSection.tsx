@@ -21,7 +21,7 @@ export default function UspsSection() {
           <div className="bento-card bento-card--large bento-card--image bento-card--cyan" id="usp-tile-1">
             <div
               className="bento-card__bg"
-              style={{ backgroundImage: "url('/images/bg/rks_overview_lab.jpg')" }}
+              style={{ backgroundImage: "url('/images/bgsoc.webp')" }}
             ></div>
             <div className="bento-card__overlay"></div>
             <div className="bento-card__content">

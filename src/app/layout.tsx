@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       'Program Studi D4 Rekayasa Keamanan Siber Polibatam. Mendidik talenta siber kelas dunia dengan Akreditasi Perdana BAIK SEKALI LAM INFOKOM & 20+ sertifikasi internasional.',
     images: [
       {
-        url: '/images/bg/rks_overview_lab.jpg',
+        url: '/images/bgsoc.webp',
         alt: 'Gambaran Laboratorium Program Studi D4 Rekayasa Keamanan Siber Polibatam',
       },
     ],
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: 'D4 Rekayasa Keamanan Siber | Politeknik Negeri Batam',
     description:
       'Program Studi D4 Rekayasa Keamanan Siber Polibatam. Mendidik talenta siber kelas dunia dengan Akreditasi BAIK SEKALI LAM INFOKOM & 20+ sertifikasi internasional.',
-    images: ['/images/bg/rks_overview_lab.jpg'],
+    images: ['/images/bgsoc.webp'],
   },
 };
 
@@ -70,16 +70,22 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="id" data-theme="dark">
+    <html lang="id" data-theme="light">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Space+Grotesk:wght@500;600;700&display=swap"
+          rel="preload"
+          as="image"
+          href="/images/bg-socroom.webp"
+          fetchPriority="high"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Space+Grotesk:wght@500;600;700&family=Orbitron:wght@600;700;800;900&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="dark-theme">
+      <body className="light-theme">
         <Providers>
           <UiProvider>
             <Header />

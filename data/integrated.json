@@ -37,7 +37,7 @@
     {
       "year": "YEAR 3",
       "yearSub": "CDIO skills are strengthened",
-      "project": "Project Keystone",
+      "project": "Project Cornerstone #2",
       "projectSpan": 2,
       "yearSpan": 2,
       "semesters": [
@@ -70,9 +70,9 @@
     {
       "year": "YEAR 2",
       "yearSub": "CDIO skills are reinforced",
-      "project": "Project Cornerstone",
-      "projectSpan": 4,
-      "yearSpan": 1,
+      "project": "Project Cornerstone #1",
+      "projectSpan": 2,
+      "yearSpan": 2,
       "semesters": [
         {
           "semester": "Semester 4",
@@ -84,16 +84,7 @@
             { "name": "Cyber Security Risk and Management", "skill": "st" },
             { "name": "General English", "skill": "ce" }
           ]
-        }
-      ]
-    },
-    {
-      "year": "YEAR 1.5",
-      "yearSub": "CDIO skills are introduced",
-      "project": null,
-      "projectSpan": 1,
-      "yearSpan": 3,
-      "semesters": [
+        },
         {
           "semester": "Semester 3",
           "courses": [
@@ -105,7 +96,16 @@
             { "name": "Bahasa Indonesia", "skill": "st" },
             { "name": "Religious Education", "skill": "ps" }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "year": "YEAR 1",
+      "yearSub": "CDIO skills are introduced",
+      "project": "Project Foundation",
+      "projectSpan": 2,
+      "yearSpan": 2,
+      "semesters": [
         {
           "semester": "Semester 2",
           "courses": [

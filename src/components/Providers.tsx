@@ -46,7 +46,7 @@ export function useTheme(): ThemeContextValue {
 
 export function Providers({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>('id');
-  const [theme, setTheme] = useState<Theme>('dark');
+  const [theme, setTheme] = useState<Theme>('light');
 
   useEffect(() => {
     const storedTheme = window.localStorage.getItem('rks-theme');

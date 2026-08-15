@@ -25,19 +25,17 @@ export default function Header() {
     <header className="site-header" id="site-header">
       <div className="container site-header__container">
         <Link href="/" className="site-header__logo" aria-label="Beranda RKS Polibatam">
-          <div className="logo-cyan-box">
-            <img
-              src="/images/logo/rks.png"
-              alt="Logo Rekayasa Keamanan Siber Polibatam"
-              className="logo-img"
-              width="64"
-              height="64"
-            />
-          </div>
-          <div className="logo-text">
-            <span className="brand-title">{t.brandTitle}</span>
-            <span className="brand-subtitle">Politeknik Negeri Batam</span>
-          </div>
+          <img
+            src="/images/logo/rks.png"
+            alt="Logo Rekayasa Keamanan Siber Polibatam"
+            className="logo-img"
+            width="64"
+            height="64"
+          />
+          <span className="logo-text">
+            <span className="brand-title">REKAYASA KEAMANAN SIBER</span>
+            <span className="brand-subtitle">POLITEKNIK NEGERI BATAM</span>
+          </span>
         </Link>
 
         <nav className="site-header__nav" aria-label="Navigasi Utama">
@@ -47,6 +45,18 @@ export default function Header() {
                 href={homeAnchor('profil')}
                 className={`nav-link${activeNav === 'home' ? '' : ''}`}
               >
+                <svg
+                  className="nav-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
                 <span>{t.navProfil}</span>
                 <svg
                   className="chevron-svg"
@@ -133,6 +143,18 @@ export default function Header() {
                 href={activeNav === 'kurikulum' ? '/kurikulum' : homeAnchor('kompetensi')}
                 className={`nav-link${activeNav === 'kurikulum' ? ' active' : ''}`}
               >
+                <svg
+                  className="nav-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </svg>
                 <span>{t.navKurikulum}</span>
                 <svg
                   className="chevron-svg"
@@ -268,6 +290,31 @@ export default function Header() {
             >
               EN
             </button>
+          </div>
+
+          <div className="nav-acc-logos" aria-label="Logo Akreditasi">
+            <span className="nav-divider" aria-hidden="true"></span>
+            <CertTrigger
+              className="hero-acc-btn cert-popup-trigger nav-acc-logo"
+              certImg="/dokumen/sertifikat_iabee.jpg"
+              certTitle="Sertifikat Akreditasi IABEE - Standard Accreditation"
+              title="Klik untuk lihat Sertifikat IABEE (JPG)"
+            >
+              <img src="/images/logo/iabee.png" alt="Akreditasi IABEE" height="40" loading="lazy" />
+            </CertTrigger>
+            <CertTrigger
+              className="hero-acc-btn cert-popup-trigger nav-acc-logo"
+              certImg="/dokumen/sertifikat_laminfokom.jpg"
+              certTitle="Sertifikat Akreditasi LAM INFOKOM - Predikat BAIK SEKALI (Akreditasi Perdana)"
+              title="Klik untuk lihat Sertifikat LAM INFOKOM (Baik Sekali)"
+            >
+              <img
+                src="/images/logo/laminfokom.png"
+                alt="Akreditasi LAM INFOKOM Baik Sekali"
+                height="40"
+                loading="lazy"
+              />
+            </CertTrigger>
           </div>
 
           <button

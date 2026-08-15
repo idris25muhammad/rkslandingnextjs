@@ -10,8 +10,8 @@ const id: UiDict = {
   navKurikulum: 'Kurikulum & Sertifikasi',
   btnPmb: 'Daftar↗',
   heroMainTitle:
-    'Raih Gelar <span class="gradient-text">D4 Sarjana Terapan</span> di Prodi RKS',
-  heroBtn1: 'Jelajahi Prospek Karir ↗',
+    'Raih Gelar <span class="title-accent">D4 Sarjana Terapan</span> di Prodi Rekayasa Keamanan Siber',
+  heroBtn1: '> Jelajahi Prospek Karir',
   heroBtn2: 'Lihat Kurikulum',
   personaTag: 'TERMINAL INTERAKTIF',
   personaTitle: 'Temukan Informasi Sesuai Profil Anda',
@@ -242,8 +242,8 @@ const en: UiDict = {
   navKurikulum: 'Curriculum & Badges',
   btnPmb: 'Apply PMB',
   heroMainTitle:
-    'Earn Your <span class="gradient-text">Applied Bachelor Degree (D4)</span> in Cyber Security Engineering',
-  heroBtn1: 'Explore Career Prospects ↗',
+    'Earn Your <span class="title-accent">Applied Bachelor Degree (D4)</span> in Cyber Security Engineering',
+  heroBtn1: '> Explore Career Prospects',
   heroBtn2: 'View Curriculum',
   personaTag: 'INTERACTIVE TERMINAL',
   personaTitle: 'Find Information for Your Profile',
