@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { useLang } from '@/components/Providers';
-import { getSemestersList, semesterOptions, type NormalizedCourse } from '@/lib/data';
+import { getSemestersList, semesterOptions, type NormalizedCourse } from '@/lib/data-kurikulum';
 
 function tagClassFor(categoryRumpun: string): string {
   let tagClass = 'tag-network';

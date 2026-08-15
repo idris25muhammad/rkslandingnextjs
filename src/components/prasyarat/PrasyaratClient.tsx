@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { prasyarat } from '@/lib/data';
+import { prasyarat } from '@/lib/data-kurikulum';
 import DiagramMobileNotice from '@/components/DiagramMobileNotice';
 
 export default function PrasyaratClient() {

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/purge-css.mjs && node scripts/precompress.mjs",
     "start": "next start",
     "export": "next build && next export",
     "lint": "next lint",
@@ -20,6 +21,7 @@
     "@types/node": "^22.14.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
+    "purgecss": "^8.0.0",
     "typescript": "^5.8.3"
   }
 }

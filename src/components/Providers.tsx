@@ -9,7 +9,7 @@ import {
   useState,
   type ReactNode,
 } from 'react';
-import { dictionaries, type UiDict } from '@/lib/i18n';
+import { id as idDict, loadEnDict, type UiDict } from '@/lib/i18n';
 import type { Lang } from '@/lib/data';
 
 type Theme = 'dark' | 'light';
@@ -22,7 +22,7 @@ interface I18nContextValue {
 
 const I18nContext = createContext<I18nContextValue>({
   lang: 'id',
-  t: dictionaries.id,
+  t: idDict,
   setLang: () => {},
 });
 
@@ -46,6 +46,7 @@ export function useTheme(): ThemeContextValue {
 
 export function Providers({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>('id');
+  const [tDict, setTDict] = useState<UiDict>(idDict);
   const [theme, setTheme] = useState<Theme>('light');
 
   useEffect(() => {
@@ -63,7 +64,14 @@ export function Providers({ children }: { children: ReactNode }) {
     document.documentElement.lang = lang;
   }, [lang]);
 
-  const setLang = useCallback((next: Lang) => setLangState(next), []);
+  const setLang = useCallback((next: Lang) => {
+    setLangState(next);
+    if (next === 'en') {
+      void loadEnDict().then((d) => setTDict(d));
+    } else {
+      setTDict(idDict);
+    }
+  }, []);
 
   const toggleTheme = useCallback(() => {
     setTheme((prev) => {
@@ -74,8 +82,8 @@ export function Providers({ children }: { children: ReactNode }) {
   }, []);
 
   const i18nValue = useMemo(
-    () => ({ lang, t: dictionaries[lang], setLang }),
-    [lang, setLang]
+    () => ({ lang, t: tDict, setLang }),
+    [lang, tDict, setLang]
   );
 
   const themeValue = useMemo(

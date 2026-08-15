@@ -107,7 +107,7 @@ export default function PersonaSection() {
 
           <div className="persona-widget__mascot" title="WISE si Ksatria Siber">
             <img
-              src="/images/maskot.png"
+              src="/images/maskot.webp"
               alt="WISE si Ksatria Siber"
               className="persona-mascot-img"
               width="50"

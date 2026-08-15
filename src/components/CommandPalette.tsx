@@ -3,7 +3,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useLang } from './Providers';
 import { useUi } from './ui-context';
-import { dosen, generalInfo, getSemestersList } from '@/lib/data';
+import { dosen, generalInfo } from '@/lib/data';
+import { getSemestersList } from '@/lib/data-kurikulum';
 
 interface CommandItem {
   title: string;

@@ -25,7 +25,7 @@ export default function PmbSection() {
             </div>
           </div>
           <div className="pmb-box__mascot">
-            <img src="/images/maskot.png" alt="Mascot RKS Ready" width="200" height="200" loading="lazy" />
+            <img src="/images/maskot.webp" alt="Mascot RKS Ready" width="200" height="200" loading="lazy" />
           </div>
         </div>
       </div>

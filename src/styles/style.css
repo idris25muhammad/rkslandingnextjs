@@ -46,11 +46,6 @@
   --shadow-cyan: 0 0 35px rgba(0, 240, 255, 0.2);
   --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.06);
 
-  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --font-display: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
-  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
-  --font-code: 'JetBrains Mono', 'Fira Code', monospace;
-
   --container-max: 1400px;
   --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -834,7 +829,7 @@ h4 {
 }
 
 .brand-title {
-  font-family: 'Orbitron', var(--font-heading);
+  font-family: var(--font-orbitron);
   font-weight: 900;
   font-size: 0.72rem;
   letter-spacing: 0.06em;
@@ -849,7 +844,7 @@ h4 {
 }
 
 .brand-subtitle {
-  font-family: 'Orbitron', var(--font-heading);
+  font-family: var(--font-orbitron);
   font-size: 0.55rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -6622,14 +6617,14 @@ h4 {
   background: rgba(0, 240, 255, 0.08);
   border: 1px solid rgba(0, 240, 255, 0.25);
   color: var(--cyan-bright);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-code);
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
 .kurikulum-hero__title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(1.98rem, 4.05vw, 3.06rem);
   font-weight: 700;
   line-height: 1.15;
@@ -6684,7 +6679,7 @@ h4 {
 }
 
 .metric-card__number {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-code);
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--cyan-bright);
@@ -6826,7 +6821,7 @@ h4 {
   background-position: right 14px center;
   border: 1px solid var(--border-subtle);
   color: var(--text-main);
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
@@ -6849,7 +6844,7 @@ h4 {
   background-color: #0b1120;
   color: #f8fafc;
   padding: 12px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-heading);
   font-size: 0.9rem;
 }
 
@@ -6924,7 +6919,7 @@ h4 {
 }
 
 .semester-header__title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: 1.7rem;
   font-weight: 700;
   color: var(--text-main);
@@ -6936,7 +6931,7 @@ h4 {
 .semester-badge {
   background: rgba(0, 240, 255, 0.1);
   color: var(--cyan-bright);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-code);
   font-size: 0.85rem;
   padding: 4px 10px;
   border-radius: 6px;
@@ -6950,7 +6945,7 @@ h4 {
 }
 
 .semester-header__meta {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-code);
   font-size: 0.9rem;
   color: var(--cyan-bright);
   background: rgba(0, 240, 255, 0.05);
@@ -7022,7 +7017,7 @@ h4 {
 }
 
 .course-code {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-code);
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--cyan-bright);
@@ -7066,7 +7061,7 @@ h4 {
 }
 
 .course-card__title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-main);
@@ -7088,7 +7083,7 @@ h4 {
 .course-card__sks-pill {
   display: inline-flex;
   gap: 12px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-code);
   font-size: 0.8rem;
   color: var(--text-muted);
   padding: 6px 12px;
@@ -7217,7 +7212,7 @@ h4 {
 }
 
 .course-modal__code-badge {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-code);
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--cyan-bright);
@@ -7229,7 +7224,7 @@ h4 {
 }
 
 .course-modal__title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-display);
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--text-main);
@@ -7290,7 +7285,7 @@ h4 {
 .modal-tool-tag {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border-subtle);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-code);
   font-size: 0.88rem;
   padding: 6px 12px;
   border-radius: 8px;

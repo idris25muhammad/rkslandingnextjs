@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { integratedCurriculum } from '@/lib/data';
+import { integratedCurriculum } from '@/lib/data-kurikulum';
 import DiagramMobileNotice from '@/components/DiagramMobileNotice';
 
 export default function IntegratedCurrClient() {

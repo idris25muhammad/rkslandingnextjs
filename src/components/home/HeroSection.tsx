@@ -13,7 +13,9 @@ export default function HeroSection() {
     <section className="hero-video" id="hero">
       <img
         className="hero-video__media"
-        src="/images/bg-socroom.webp"
+        src="/images/bg-socroom-640.webp"
+        srcSet="/images/bg-socroom-640.webp 640w, /images/bg-socroom-1080.webp 1080w, /images/bg-socroom-1920.webp 1920w"
+        sizes="100vw"
         alt=""
         aria-hidden="true"
         width="1884"

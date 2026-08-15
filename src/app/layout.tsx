@@ -1,11 +1,53 @@
 import type { Metadata, Viewport } from 'next';
+import {
+  DM_Sans,
+  JetBrains_Mono,
+  Orbitron,
+  Plus_Jakarta_Sans,
+  Space_Grotesk,
+} from 'next/font/google';
 import '../styles/style.css';
 import '../styles/overrides.css';
+
+const fontHeading = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: 'variable',
+  variable: '--font-heading',
+  display: 'swap',
+});
+
+const fontDisplay = Space_Grotesk({
+  subsets: ['latin'],
+  weight: 'variable',
+  variable: '--font-display',
+  display: 'swap',
+});
+
+const fontBody = DM_Sans({
+  subsets: ['latin'],
+  weight: 'variable',
+  variable: '--font-body',
+  display: 'swap',
+});
+
+const fontCode = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: 'variable',
+  variable: '--font-code',
+  display: 'swap',
+});
+
+const fontOrbitron = Orbitron({
+  subsets: ['latin'],
+  weight: 'variable',
+  variable: '--font-orbitron',
+  display: 'swap',
+});
 import { Providers } from '@/components/Providers';
 import { UiProvider } from '@/components/ui-context';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import CommandPalette from '@/components/CommandPalette';
+import CommandPaletteLoader from '@/components/CommandPaletteLoader';
 import CertModal from '@/components/CertModal';
 import MobileMenu from '@/components/MobileMenu';
 import BackToTop from '@/components/BackToTop';
@@ -70,28 +112,19 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="id" data-theme="light">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="preload"
-          as="image"
-          href="/images/bg-socroom.webp"
-          fetchPriority="high"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Space+Grotesk:wght@500;600;700&family=Orbitron:wght@600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html
+      lang="id"
+      data-theme="light"
+      className={`${fontHeading.variable} ${fontDisplay.variable} ${fontBody.variable} ${fontCode.variable} ${fontOrbitron.variable}`}
+    >
+      <head></head>
       <body className="light-theme">
         <Providers>
           <UiProvider>
             <Header />
             <main>{children}</main>
             <Footer />
-            <CommandPalette />
+            <CommandPaletteLoader />
             <CertModal />
             <MobileMenu />
             <BackToTop />

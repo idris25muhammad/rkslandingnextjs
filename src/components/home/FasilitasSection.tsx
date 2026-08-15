@@ -4,11 +4,11 @@ import { useLang } from '@/components/Providers';
 import SectionTitle from '@/components/home/SectionTitle';
 
 const LABS = [
-  { room: 'Ruang 10.3', img: '/images/fasilitas/10.3.jpg', titleKey: 'lab1Title', descKey: 'lab1Desc' },
-  { room: 'Ruang 10.4', img: '/images/fasilitas/10.4.jpg', titleKey: 'lab2Title', descKey: 'lab2Desc' },
-  { room: 'Ruang 11.3', img: '/images/fasilitas/11.3.jpg', titleKey: 'lab3Title', descKey: 'lab3Desc' },
-  { room: 'Ruang 11.4', img: '/images/fasilitas/11.4.jpg', titleKey: 'lab4Title', descKey: 'lab4Desc' },
-  { room: 'Ruang 11.5', img: '/images/fasilitas/11.5.jpg', titleKey: 'lab5Title', descKey: 'lab5Desc' },
+  { room: 'Ruang 10.3', img: '/images/fasilitas/10.3.webp', titleKey: 'lab1Title', descKey: 'lab1Desc' },
+  { room: 'Ruang 10.4', img: '/images/fasilitas/10.4.webp', titleKey: 'lab2Title', descKey: 'lab2Desc' },
+  { room: 'Ruang 11.3', img: '/images/fasilitas/11.3.webp', titleKey: 'lab3Title', descKey: 'lab3Desc' },
+  { room: 'Ruang 11.4', img: '/images/fasilitas/11.4.webp', titleKey: 'lab4Title', descKey: 'lab4Desc' },
+  { room: 'Ruang 11.5', img: '/images/fasilitas/11.5.webp', titleKey: 'lab5Title', descKey: 'lab5Desc' },
 ];
 
 export default function FasilitasSection() {
